@@ -1431,7 +1431,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
           <span class="mchip on" data-metric="vis" style="--mc:var(--teal)"><span class="mdot"></span><span class="mlbl">Visibility</span><span class="mval mono">30%</span></span>
           <span class="mchip on" data-metric="sov" style="--mc:var(--indigo)"><span class="mdot"></span><span class="mlbl">Share of Voice</span><span class="mval mono">16.6%</span></span>
           <span class="mchip" data-metric="pos" style="--mc:var(--amber)"><span class="mdot"></span><span class="mlbl">Avg Position</span><span class="mval mono">1.2</span></span>
-          <span class="mchip" data-metric="sent" style="--mc:var(--green)"><span class="mdot"></span><span class="mlbl">Net Sentiment</span><span class="mval mono">33.7</span></span>
+          <span class="mchip" data-metric="sent" style="--mc:var(--green)"><span class="mdot"></span><span class="mlbl">Net Sentiment</span><span class="mval mono">51</span></span>
           <span class="mchip" data-metric="cov" style="--mc:var(--violet)"><span class="mdot"></span><span class="mlbl">Prompt coverage</span><span class="mval mono">39/65</span></span>
         </div>
         <div class="mdrop" id="modelDrop">
@@ -1511,7 +1511,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
         <div class="tile-top">
           <span class="tile-lbl">AI Traffic <span class="pop-anchor"><span class="info" data-pop="traffic" tabindex="0">i</span></span></span>
           <div class="tf-demo-toggle">
-            <div class="seg-toggle sm" id="trafficDemoToggle" title="Mockup: preview both states">
+            <div class="seg-toggle sm" id="trafficDemoToggle" title="Demo: preview both states">
               <button class="on" data-tf="unconf">Not set up</button>
               <button data-tf="conf">Connected</button>
             </div>
@@ -1587,7 +1587,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
             </div>
             <div class="seg-toggle sm vis-scale-toggle" id="visScaleToggle" title="Preview how the list behaves when many brands are mentioned">
               <button class="on" data-vsc="real">14 brands</button>
-              <button data-vsc="stress">Stress test: 100</button>
+              <button data-vsc="stress">Preview: 100 brands</button>
             </div>
           </div>
         </div>
@@ -1692,7 +1692,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
 
         <div class="vis-scale-note" id="visScaleNote"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 4l-7 12a2 2 0 001.7 3h14a2 2 0 001.7-3l-7-12a2 2 0 00-3.4 0z"/></svg><span>Illustrative stress test: 100 brands mentioned. The list becomes a fixed-height scroll region and paginates 10 per page, so the panel never grows unbounded. Your own row stays pinned at the top of page 1.</span></div>
         <div class="vis-cap" id="visModelCap">Visibility Score for competitors is modelled for this concept; your own score (29.8%) is from live data.</div>
-        <div class="vis-cap" id="discCap">Discovered brands surfaced in AI responses but not yet added to tracking. Rawson, Henley and Hotondo are real discoveries; the additional discovered rows are illustrative for this mockup to demonstrate pagination. Add any brand to monitor it over time.</div>
+        <div class="vis-cap" id="discCap">Discovered brands surfaced in AI responses but not yet added to tracking. Rawson, Henley and Hotondo are real discoveries; the additional discovered rows are illustrative for this demo to demonstrate pagination. Add any brand to monitor it over time.</div>
         <!-- L4 point 3: the grey "bars scaled to leader" info box that sat here has
              been removed. The stress-test toggle above stays and remains functional;
              it reads as self-evident without an explanatory callout. -->
@@ -1705,7 +1705,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
           <div class="head-toggles">
             <div class="seg-toggle sm vbt-scale-toggle" id="vbtScaleToggle" title="Preview how this panel behaves as you track more engines">
               <button class="on" data-vbt="real">3 tracked</button>
-              <button data-vbt="stress">Stress test: 10</button>
+              <button data-vbt="stress">Preview: 10 engines</button>
             </div>
           </div>
         </div>
@@ -1782,7 +1782,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
           <span class="topic-count-tag" id="topicCountTag"></span>
           <div class="seg-toggle sm" id="topicScaleToggle" title="Preview how the list behaves with a larger topic set">
             <button class="on" data-tsc="real">6 topics</button>
-            <button data-tsc="stress">Stress test: 22</button>
+            <button data-tsc="stress">Preview: 22 topics</button>
           </div>
         </div>
       </div>
@@ -1811,7 +1811,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
         <span class="pager-info" id="topicPagerInfo"></span>
         <div class="pager-btns" id="topicPagerBtns"></div>
       </div>
-      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Visibility is the ring value; click any topic to see its example prompts and per-engine coverage. Use the search or the stress-test toggle to see how the list paginates as topics grow.</span></div>
+      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Visibility is the ring value; click any topic to see its example prompts and per-engine coverage. Use the search or the preview toggle to see how the list paginates as topics grow.</span></div>
     </div>
 
     <!-- SENTIMENT -->
@@ -1981,7 +1981,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
     var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     var MONTHS_FULL=['January','February','March','April','May','June','July','August','September','October','November','December'];
     var DEFAULT_LABEL='June 2026';
-    // "current" reference month for the mockup = June 2026 (index 5)
+    // "current" reference month for the demo = June 2026 (index 5)
     var CUR_YEAR=2026, CUR_MONTH=5;
     var viewYear=2026;
     var selStart=null; // {y,m}
@@ -2181,7 +2181,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
     vis:  {color:'var(--teal)',   data:[38,46,55,52,44,33.8,30]},
     sov:  {color:'var(--indigo)', data:[22,25,29,28,26.6,20,16.6]},
     pos:  {color:'var(--amber)',  data:[86,88,90,89,89,88,88]},
-    sent: {color:'var(--green)',  data:[48,52,60,58,55.2,42,33.7]},
+    sent: {color:'var(--green)',  data:[46,52,58,62,66,72.5,51]},
     cov:  {color:'var(--violet)', data:[70,66,72,68,64,62,60]}
   };
   // per-engine multiplicative shape factors (illustrative, kept plausible + bounded).
@@ -2723,7 +2723,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
             '<span class="prm-tag">full response</span>'+
             '<span class="prm-run mono">run 1 of '+(key==='chatgpt'||key==='aio'?'5':'3')+'</span></div>'+
           '<div class="pb-resp-body">'+buildResponse(qtext,key,eComps,ev,pos)+'</div>'+
-          '<div class="pb-resp-foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>Illustrative response text for this mockup, showing where your brand and competitors were named. Highlights: <span class="rb-brand">you</span>, <span class="rb-comp">competitor</span>.</div>'+
+          '<div class="pb-resp-foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>Illustrative response text for this demo, showing where your brand and competitors were named. Highlights: <span class="rb-brand">you</span>, <span class="rb-comp">competitor</span>.</div>'+
         '</div></div>') : '';
       inner+='<div class="pbrow'+(on?'':' pb-off')+'"'+(on?' data-resp="1"':'')+'>'+
         '<img class="elogo sm" src="'+ELOGO[key].src+'" alt="">'+
@@ -2761,7 +2761,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
     });
     inner+='</div>';
 
-    inner+='<div class="pbreak-legend"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>P = mention position (lower is better); x2 = mentioned twice across that engine\'s runs. Values are illustrative for this mockup.</div>';
+    inner+='<div class="pbreak-legend"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>P = mention position (lower is better); x2 = mentioned twice across that engine\'s runs. Values are illustrative for this demo.</div>';
     inner+='</div>'; // close pane 1 (engines & competitors)
 
     // ---- L4 point 5: Top citations pane. The five sources AI engines drew on
@@ -2779,7 +2779,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
         '<span class="cite-count" title="Cited in '+r.cnt+' of this prompt\'s responses"><span class="cc-bar" style="width:'+barW+'px"></span>'+r.cnt+'x</span>'+
       '</div>';
     });
-    inner+='<div class="cite-foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>Sources AI engines drew on for this prompt, ranked by how often they were cited. Domains are real citation-type sources; the counts are illustrative for this mockup.</div>';
+    inner+='<div class="cite-foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>Sources AI engines drew on for this prompt, ranked by how often they were cited. Domains are real citation-type sources; the counts are illustrative for this demo.</div>';
     inner+='</div>'; // close pane 2 (citations)
 
     inner+='</div>'; // close .pbreak-inner
@@ -2890,7 +2890,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
       this.querySelectorAll('button').forEach(function(b){b.classList.remove('on');});
       btn.classList.add('on');
       var conf=btn.getAttribute('data-tf')==='conf';
-      // default state is UNCONFIGURED; toggle purely previews the connected state for the mockup
+      // default state is UNCONFIGURED; toggle purely previews the connected state for the demo
       tfConf.classList.toggle('show',conf);
       tfUnconf.classList.toggle('hide',conf);
     });

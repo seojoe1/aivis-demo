@@ -1063,7 +1063,7 @@ button,input,textarea,select{font-family:inherit;}
             <div><span class="cov-pill cov-bad">32%</span></div>
           </div>
         </div>
-        <div class="sample-caption">Representative example data for this mockup. Coverage % is prompts-with-at-least-one-response divided by total tracked prompts (65) for this engine.</div>
+        <div class="sample-caption">Representative example data for this demo. Coverage % is prompts-with-at-least-one-response divided by total tracked prompts (65) for this engine.</div>
       </div>
     </div>
   </div>
@@ -1174,7 +1174,7 @@ button,input,textarea,select{font-family:inherit;}
               <textarea class="ask-textarea" id="askInput" placeholder="Ask a question about this brand's AI visibility..." rows="1"></textarea>
               <button class="ask-send" id="askSend" disabled onclick="sendMessage()"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
             </div>
-            <div class="ask-hint">Press Enter to send. Shift+Enter for a new line. Suggested questions above are grounded in your AIVIS data; this mockup doesn't yet connect free-text questions to real data.</div>
+            <div class="ask-hint">Press Enter to send. Shift+Enter for a new line. Suggested questions above are grounded in your AIVIS data; this demo doesn't yet connect free-text questions to real data.</div>
           </div>
 
         </div>
@@ -1352,11 +1352,11 @@ var starterAnswers = {
   }
 };
 
-// Honest fallback for genuine free-text questions: this static mockup has no
+// Honest fallback for genuine free-text questions: this demo has no
 // real backend/LLM behind it, so it says so instead of fabricating an answer.
 var mockupNotice = {
   isMockupNotice:true,
-  text:"This is a static mockup, so free-text questions aren't connected to real AIVIS data yet. Try one of the suggested questions above for a live example of a grounded answer."
+  text:"This is a demo, so free-text questions aren't connected to real AIVIS data yet. Try one of the suggested questions above for a live example of a grounded answer."
 };
 
 function appendUserMessage(text){
@@ -1388,7 +1388,7 @@ function appendAssistantMessage(payload){
   thread.scrollTop = thread.scrollHeight;
 }
 
-// Free-text send: always honest about being a static mockup. It never invents
+// Free-text send: always honest about being a demo. It never invents
 // a specific-sounding answer to whatever was typed.
 function sendMessage(){
   var text = askInput.value.trim();
@@ -1419,13 +1419,13 @@ function sendStarter(btn){
 
 // ---------- Ask AIVIS: source-chip clicks ----------
 // These "View X" chips have nowhere to navigate to inside this single static
-// mockup page, so instead of a dead click they honestly say what they'd do
+// demo page, so instead of a dead click they honestly say what they'd do
 // in the real product.
 var chipToastTimer = null;
 function showChipToast(topic){
   var t = document.getElementById('chipToast');
   if(!t) return;
-  t.textContent = 'Opens the ' + topic + ' page in the full product - not available in this static mockup.';
+  t.textContent = 'Opens the ' + topic + ' page in the full product - not available in this demo.';
   t.classList.add('show');
   if(chipToastTimer) clearTimeout(chipToastTimer);
   chipToastTimer = setTimeout(function(){ t.classList.remove('show'); }, 2600);
@@ -1439,7 +1439,7 @@ document.addEventListener('click', function(e){
 });
 
 // ---------- Experiment cards: open the detail view ----------
-// Only one experiment has full detail data built out in this mockup (Fixed-price
+// Only one experiment has full detail data built out in this demo (Fixed-price
 // FAQ structure), so every card jumps to that same labelled example rather than
 // fabricating unique detail data for the other four.
 function openExperimentDetail(){

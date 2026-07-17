@@ -648,11 +648,11 @@ table.otbl tbody td.evcell{text-align:right;}
     <div class="head-row">
       <div>
         <h1 class="title">Offsite Mentions</h1>
-        <div class="head-sub">Citations on domains that are not your own, with row-level owned, competitor and third-party classification. This is the surface PromptWatch cannot match: it has no ownership context on individual rows.</div>
+        <div class="head-sub">Citations on domains that are not your own, with row-level owned, competitor and third-party classification. Every row carries ownership context: owned, competitor or third-party.</div>
       </div>
     </div>
 
-    <div class="static-note"><b>Static design mockup</b><span>Filters, sort, search and export below operate on a fixed local dataset. Nothing here calls a live API.</span></div>
+    <div class="static-note"><b>Demo environment</b><span>Filters, sort, search and export below operate on this demo's sample dataset.</span></div>
 
     <div class="filters" id="filterRow">
       <div class="fdrop brand-pill">
@@ -1745,7 +1745,7 @@ window.AnswersCard = (function(){
         + '<button class="ains-go" type="button" data-go="' + esc(r.go) + '">' + esc(r.label) + '<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>'
         + '</div>';
     }).join('');
-    document.getElementById('ainsMeta').textContent = 'Generated from ' + TOTAL_ROWS + ' tracked offsite mentions · fixed dataset, this static mockup';
+    document.getElementById('ainsMeta').textContent = 'Generated from ' + TOTAL_ROWS + ' tracked offsite mentions · fixed dataset, this demo';
 
     document.getElementById('ainsList').addEventListener('click', function(e){
       var btn = e.target.closest('[data-go]');
@@ -1982,7 +1982,7 @@ window.AnswersCard = (function(){
     mentionClass:{
       t:'Class',
       def:'The ownership classification of the citing URL: Owned (your own domain), Competitor-owned (a tracked competitor’s domain) or Third-party (review, directory, editorial, social or other independent sites).',
-      note:'Offsite Mentions lists only non-owned URLs, so Owned is always 0 here by design. This ownership context on every row is the surface competitors like PromptWatch cannot match.'
+      note:'Offsite Mentions lists only non-owned URLs, so Owned is always 0 here by design. Ownership context is attached to every row.'
     },
     riskSignal:{
       t:'Risk',

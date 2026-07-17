@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AIVIS - Visibility (V6)</title>
+<title>AIVIS - Visibility - Clarendon Homes</title>
 <style>
 @font-face {
   font-family: 'Geist';
@@ -855,7 +855,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
           <div class="kpi" style="padding:12px"><span class="kpi-lbl">Mention rate <span class="pop-anchor"><span class="info" data-pop="mention" tabindex="0" role="button">i</span></span></span><span class="kpi-val" style="font-size:20px">41%</span><span class="kpi-ci">95% CI 34.6 to 47.9pp</span></div>
           <div class="kpi" style="padding:12px"><span class="kpi-lbl">Avg position <span class="pop-anchor"><span class="info" data-pop="position" tabindex="0" role="button">i</span></span></span><span class="kpi-val" style="font-size:20px">#1.2</span><span class="kpi-ci">Rank 1 of 138</span></div>
         </div>
-        <div class="gauge-foot" style="width:100%;margin-top:12px;font-size:11px;color:var(--grey-2);line-height:1.4;display:flex;align-items:flex-start;gap:6px;text-align:left;"><svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:var(--grey-2);stroke-width:1.7;fill:none;flex:0 0 auto;margin-top:1px;"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Mention rate is unweighted; the Visibility Score above blends engines per ANALYSIS_SPEC 4.3.</span></div>
+        <div class="gauge-foot" style="width:100%;margin-top:12px;font-size:11px;color:var(--grey-2);line-height:1.4;display:flex;align-items:flex-start;gap:6px;text-align:left;"><svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:var(--grey-2);stroke-width:1.7;fill:none;flex:0 0 auto;margin-top:1px;"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Mention rate is unweighted; the Visibility Score blends per-engine inclusion rates, weighted 45/35/20 across ChatGPT, Google AI Overviews and Perplexity.</span></div>
       </div>
 
       <div class="card insight-card">
@@ -923,7 +923,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
         </svg>
         <div id="trendTip"></div>
       </div>
-      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Blended score is a weighted average of per-engine inclusion rates over unbranded prompts. Click an engine chip to add or remove its line. Illustrative demo data (source: simulated), captioned honestly.</span></div>
+      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Blended score is a weighted average of per-engine inclusion rates over unbranded prompts. Click an engine chip to add or remove its line. Illustrative demo data.</span></div>
     </div>
     </div><!-- /refwrap 3 -->
 
@@ -943,7 +943,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
       <div class="mx-legend" id="mxLegend"><span>Topic visibility, tinted in each engine's colour:</span></div>
       <div class="mx-scroll"><div class="mx-grid" id="mxGrid"></div></div>
       <div class="mx-drill" id="mxDrill"><div class="mx-drill-inner" id="mxDrillInner"></div></div>
-      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Rows are topics, columns are engines. A cell is the share of that topic's unbranded responses that mention your brand, not topic share of voice. Hatched cells mean no data captured, distinct from a real low value. Click a cell to see supporting prompts. Unlike PromptWatch's 3-column heatmap, every tracked engine with data is shown and the count is disclosed above.</span></div>
+      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Rows are topics, columns are engines. A cell is the share of that topic's unbranded responses that mention your brand, not topic share of voice. Hatched cells mean no data captured, distinct from a real low value. Click a cell to see supporting prompts. Every tracked engine that returned data is shown, and the count is disclosed above.</span></div>
     </div>
     </div><!-- /refwrap 4 -->
 
@@ -1025,11 +1025,11 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
         </span>
       </div>
 
-      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Visibility is decided prompt by prompt. Search, filter by intent or topic, sort and page through every tracked prompt, then open any row to launch the detail panel: the full per-engine response, its citations by source type, tracked competitor mentioned/not-mentioned flags and the query fan-out behind the answer, in the same evidence-drawer pattern used on the Answers page. Headline percentages follow the real ANALYSIS_SPEC formulas; the example response, citation and fan-out strings in the panel are illustrative (source: simulated).</span></div>
+      <div class="info-bar foot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span>Visibility is decided prompt by prompt. Search, filter by intent or topic, sort and page through every tracked prompt, then open any row to launch the detail panel: the full per-engine response, its citations by source type, tracked competitor mentioned/not-mentioned flags and the query fan-out behind the answer, in the same evidence-drawer pattern used on the Answers page. Headline percentages follow AIVIS's scoring formulas; the example response, citation and fan-out strings in the panel are illustrative.</span></div>
     </div>
     </div><!-- /refwrap 6 -->
 
-    <div class="foot-note">AIVIS visibility mockup &middot; V6 analyst deep-dive, reconciled with Overview &middot; illustrative data (simulated), formulas quoted verbatim from ANALYSIS_SPEC.md. AU English.</div>
+    <div class="foot-note">AIVIS visibility demo &middot; Illustrative demo data, consistent with the Overview page.</div>
   </main>
 </div>
 
@@ -1570,6 +1570,11 @@ var COMPFAV = {
   var W={chatgpt:0.45, aio:0.35, perplexity:0.20};
   var blended=[]; for(var i=0;i<12;i++){ var s=0; ENGINES.forEach(function(e){ s+=trendData[e.slug][i]*W[e.slug]; }); blended.push(Math.round(s*10)/10); }
   trendData.all=blended;
+  // calibrate blended headline to the canonical tracked figures (29.8% Jun, 33.6% May => -3.8pp)
+  (function(){ var kT=29.8/blended[11], kP=33.6/blended[10];
+    ENGINES.forEach(function(e){ var a=trendData[e.slug];
+      a[11]=Math.round(a[11]*kT*10)/10; a[10]=Math.round(a[10]*kP*10)/10; });
+    blended[11]=29.8; blended[10]=33.6; })();
 
   // ITEM 4: per-engine 12-month AVG POSITION series (1.0 best .. ~5.0). Lower is better.
   var POS_BASE={chatgpt:1.4, perplexity:2.1, aio:1.8};
@@ -2219,7 +2224,7 @@ var COMPFAV = {
       {label:'Share of voice', value:'Not available at response level', available:false, tone:'muted',
         note:'Share of Voice is a portfolio-level metric computed across every unbranded prompt in the period. It cannot be honestly derived from a single response, so no number is shown here. See the competitor tab below for what is real about this response.'},
       {label:'Sentiment', value:SENTI_LABEL[senti], available:true, tone:senti,
-        note:'Illustrative sentiment classification for this specific captured response (demo data, matches the rest of this mockup’s illustrative response text).'}
+        note:'Illustrative sentiment classification for this specific captured response (demo data, matches the rest of this demo’s illustrative response text).'}
     ];
   }
 
@@ -2338,7 +2343,7 @@ var COMPFAV = {
     return '<div class="ac-sec-lbl-row"><div class="ac-sec-lbl">Competitor view <span class="ac-sec-n mono">'+(TRACKED_COMPS.length+1)+' brands</span></div>'
       + '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">'+compToggleHtml('all')+dateRangeSelectHtml(promptId)+'</div></div>'
       + '<div class="comp-tbl">'+rows+'</div>'
-      + '<div class="ac-comp-all-note">Raw mention rate across '+stats.totalResponses+' captured engine responses in this demo dataset for the selected range: '+esc(range.label)+' (every tracked prompt, every engine, every captured date in range). This is not the governed portfolio Share of Voice metric, which weights by prompt pool and period per ANALYSIS_SPEC.md; it is shown as a transparent, non-fabricated cross-check only.</div>';
+      + '<div class="ac-comp-all-note">Raw mention rate across '+stats.totalResponses+' captured engine responses in this demo dataset for the selected range: '+esc(range.label)+' (every tracked prompt, every engine, every captured date in range). This is not the governed portfolio Share of Voice metric, which weights by prompt pool and period; it is shown as a transparent, non-fabricated cross-check only.</div>';
   }
 
   // "Sources by type, all engines this capture date" collapse (extends the

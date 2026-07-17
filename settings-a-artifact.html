@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AIVIS Settings - Brand + Org - Reconciled Surface</title>
+<title>AIVIS - Settings</title>
 <style>
 @font-face {
   font-family: 'Geist';
@@ -473,8 +473,8 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
 <div class="demo-top">
   <div class="dt-left">
     <span class="dt-title">AIVIS Settings</span>
-    <span class="dt-tag">Reconciled surface</span>
-    <span class="dt-sub">One coherent Settings experience. The 5 orphaned legacy pages (Security, Billing, Team, Branding, Webhooks) plus Audit log are folded into Org Settings, not bolted on.</span>
+    <span class="dt-tag"></span>
+    <span class="dt-sub">Brand and organisation settings, in one place.</span>
   </div>
   <div class="mode-toggle" id="modeToggle">
     <button class="on" data-mode="brand">
@@ -555,7 +555,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
   <main class="main">
     <!-- Profile -->
     <div class="pane active" data-pane="profile">
-      <div class="crumb"><b>Clarendon Homes</b> <span class="sep">/</span> Settings <span class="sep">/</span> Profile <span class="route">/brand/{brandId}/settings</span></div>
+      <div class="crumb"><b>Clarendon Homes</b> <span class="sep">/</span> Settings <span class="sep">/</span> Profile </div>
       <h1 class="title">Brand profile</h1>
       <div class="head-sub">Core identity for this brand. These values drive how AIVIS labels the focal brand across every report.</div>
       <div class="zone card">
@@ -728,7 +728,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
 
     <!-- Engines -->
     <div class="pane" data-pane="engines">
-      <div class="crumb"><b>Clarendon Homes</b> <span class="sep">/</span> Settings <span class="sep">/</span> Engines &amp; sampling <span class="route">/brand/{brandId}/settings</span></div>
+      <div class="crumb"><b>Clarendon Homes</b> <span class="sep">/</span> Settings <span class="sep">/</span> Engines &amp; sampling </div>
       <h1 class="title">Engines &amp; sampling</h1>
       <div class="head-sub">Which AI engines to query, how many runs per prompt, and the deep / pulse cadence. Drives the monthly spend on this brand.</div>
       <div class="zone card">
@@ -948,7 +948,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
       <button class="nav-item" data-o="export"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M4 19h16"/></svg> Export &amp; danger zone <span class="danger-tag">Care</span></button>
     </div>
 
-    <div class="legacy-note"><b>Reconciled.</b> Team, Billing, Branding, Security and Webhooks were a separate orphaned <span class="mono">/settings</span> shell unreachable from the workspace nav. They now live here, in one Settings surface.</div>
+    <div class="legacy-note"><b>Team, Billing, Branding, Security, Webhooks and the Audit log all live here, in one Settings surface.</div>
 
     <div class="side-div"></div>
     <div class="usage-card">
@@ -994,7 +994,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
     <div class="pane" data-pane="team">
       <div class="crumb"><b>Meridian Digital</b> <span class="sep">/</span> Org settings <span class="sep">/</span> Team <span class="route">migrated from /settings/team</span></div>
       <h1 class="title">Team</h1>
-      <div class="head-sub">Members of this organisation and their roles. Previously an orphaned legacy page, now part of Org Settings.</div>
+      <div class="head-sub">Members of this organisation and their roles.</div>
       <div class="zone card">
         <div class="card-h"><div class="ch-tx"><div class="ch-t">Members</div><div class="ch-s">Invite by email, resend pending invites, or deactivate a member.</div></div><span class="card-badge cb-legacy">Legacy page</span></div>
         <div class="tbl-wrap"><table class="dtbl" id="teamTable">
@@ -1016,7 +1016,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
     <div class="pane" data-pane="billing">
       <div class="crumb"><b>Meridian Digital</b> <span class="sep">/</span> Org settings <span class="sep">/</span> Billing <span class="route">migrated from /settings/billing</span></div>
       <h1 class="title">Billing</h1>
-      <div class="head-sub">Subscription status and payment management via Stripe. Migrated from the orphaned legacy shell.</div>
+      <div class="head-sub">Subscription status and payment management via Stripe.</div>
       <div class="zone card">
         <div class="card-h"><div class="ch-tx"><div class="ch-t">Subscription</div><div class="ch-s">Your current plan and billing status.</div></div><span class="card-badge cb-legacy">Legacy page</span></div>
         <div class="stat-inline">
@@ -1130,7 +1130,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
     <div class="pane" data-pane="webhooks">
       <div class="crumb"><b>Meridian Digital</b> <span class="sep">/</span> Org settings <span class="sep">/</span> Webhooks <span class="route">migrated from /settings/webhooks</span></div>
       <h1 class="title">Webhooks</h1>
-      <div class="head-sub">Send AIVIS events to your own systems. Migrated from the orphaned legacy shell.</div>
+      <div class="head-sub">Send AIVIS events to your own systems.</div>
       <div class="zone card">
         <div class="card-h"><div class="ch-tx"><div class="ch-t">Endpoints</div><div class="ch-s">Create an endpoint, choose events, and AIVIS will POST signed payloads.</div></div><span class="card-badge cb-legacy">Legacy page</span></div>
         <div class="tbl-wrap"><table class="dtbl" id="hookTable">
@@ -1209,7 +1209,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
     <div class="pane" data-pane="audit">
       <div class="crumb"><b>Meridian Digital</b> <span class="sep">/</span> Org settings <span class="sep">/</span> Audit log <span class="route">migrated from /settings/audit</span></div>
       <h1 class="title">Audit log</h1>
-      <div class="head-sub">Read-only history of actions across the organisation. Visible to org admins only. Migrated from the orphaned legacy shell.</div>
+      <div class="head-sub">Read-only history of actions across the organisation. Visible to org admins only.</div>
       <div class="zone card">
         <div class="card-h"><div class="ch-tx"><div class="ch-t">Activity</div><div class="ch-s">Action, actor, target and timestamp. Filter and page through the history.</div></div><span class="card-badge cb-legacy">Legacy page</span></div>
         <div class="audit-filter">
@@ -1289,7 +1289,7 @@ table.dtbl .row-name{font-weight:500;color:var(--ink);}
     <div class="legend-row"><span class="legend-num">10</span> <span><b>Audit log</b> - paginated action history, read-only, admin-only</span> <span class="lg-legacy">Legacy</span></div>
     <div class="legend-row"><span class="legend-num">11</span> <span><b>Export &amp; danger zone</b> - export, delete-client + delete-org type-to-confirm (owner)</span></div>
   </div>
-  <div class="foot-note">AIVIS Settings mockup &middot; reconciled Brand + Org settings surface. Design language reused from l4-overview / n4-competitors / p5-nav (Geist + IBM Plex Mono, locked colour tokens, no gradients, weight cap 600). Data shown is illustrative for layout only, not verified figures. The 5 orphaned legacy pages (Team, Billing, Branding, Security, Webhooks) plus the Audit log are folded into one coherent Org Settings shell rather than left as a separate unreachable <span class="mono">/settings</span> system.</div>
+  <div class="foot-note">AIVIS Settings demo &middot; reconciled Brand + Org settings surface. Design language reused from l4-overview / n4-competitors / p5-nav (Geist + IBM Plex Mono, locked colour tokens, no gradients, weight cap 600). Data shown is illustrative for layout only, not verified figures. </div>
 </div>
 
 <div class="modal-overlay" id="mergeModal">

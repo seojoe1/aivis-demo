@@ -1,4 +1,4 @@
-<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIVIS - Recommendations v7-b - Source-Area Audit Console - Clarendon Homes</title>
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AIVIS - Recommendations - Clarendon Homes</title>
 <!--
   FAUX-BOLD FALLBACK METHOD: real Geist Medium (500) and SemiBold (600) woff2
   files could not be located in the repo within the time-boxed search
@@ -701,7 +701,7 @@ table.rtbl td{padding:10px 12px;vertical-align:top;color:var(--ink-2);}
     <div class="head-row">
       <div>
         <h1 class="title">Recommendations</h1>
-        <p class="head-sub">Every recommendation grouped by the source area it was generated from, so an analyst can work category by category with the evidence deep-link close at hand. 42 recommendations across 6 source areas, derived deterministically from severityTier, priority and priorityScore<span class="pop-anchor"><span class="minfo" data-pop="impact" role="button" tabindex="0" aria-label="About impact and priority score">i</span></span>, never invented. Recommend rate<span class="pop-anchor"><span class="minfo" data-pop="recommend" role="button" tabindex="0" aria-label="About recommend rate">i</span></span>, the AI-visibility metric this console works to lift, measures how often an engine names Clarendon when asked to recommend a home builder.</p>
+        <p class="head-sub">Every recommendation grouped by the source area it was generated from, so an analyst can work category by category with the evidence deep-link close at hand. 42 recommendations across 6 source areas, each derived from tracked severity, priority and impact scoring<span class="pop-anchor"><span class="minfo" data-pop="impact" role="button" tabindex="0" aria-label="About impact and priority score">i</span></span> — nothing is invented. Recommend rate<span class="pop-anchor"><span class="minfo" data-pop="recommend" role="button" tabindex="0" aria-label="About recommend rate">i</span></span>, the AI-visibility metric this console works to lift, measures how often an engine names Clarendon when asked to recommend a home builder.</p>
       </div>
     </div>
 
@@ -1840,13 +1840,13 @@ else init();
     },
     severity:{
       t:'Priority (severity tier)',
-      def:'The severity tier shown on every row, High, Medium or Low, reflecting how much the underlying issue affects the brand’s AI visibility, accuracy or narrative. Set deterministically from severityTier, never hand-picked.',
+      def:'The severity tier shown on every row, High, Medium or Low, reflecting how much the underlying issue affects the brand’s AI visibility, accuracy or narrative. Set from tracked severity, never hand-picked.',
       flabel:'Reading',
       formula:'High = action first · Medium = schedule · Low = monitor or batch'
     },
     impact:{
       t:'Impact (priority score)',
-      def:'The modelled effect on the brand’s AI visibility if a finding is actioned. Impact is combined with severity to produce the deterministic priorityScore that orders the list, so nothing is ranked by hand.',
+      def:'The modelled effect on the brand’s AI visibility if a finding is actioned. Impact is combined with severity to order the list, so nothing is ranked by hand.',
       note:'Impact is a modelled estimate used for ordering, not a measured outcome. Actual movement is tracked separately against each recommendation’s countable target.'
     },
     effort:{

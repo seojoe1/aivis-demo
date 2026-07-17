@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>AIVIS: Answers (V6) - Answers Card component</title>
+<title>AIVIS - Answers - Clarendon Homes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
   FAUX-BOLD FALLBACK METHOD: real Geist Medium (500) and SemiBold (600) woff2
@@ -909,7 +909,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
     <div class="crumb"><b>Clarendon Homes</b><span class="sep">/</span>Answers</div>
     <div class="head-row">
       <div>
-        <h1 class="title">Answers Explorer</h1>
+        <h1 class="title">Answers</h1>
         <div class="head-sub">Every captured answer for your portfolio in a split workspace: browse prompts on the left, read the full response, citations, competitor presence and query fan-out on the right.</div>
       </div>
       <div class="head-actions">
@@ -919,7 +919,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
 
     <div class="defcard">
       <span class="di"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg></span>
-      <div class="dt"><b>What this page shows.</b> Each row on the left is one prompt run. A prompt can be answered by up to three engines in the same run; the green dot shows whether your brand was mentioned by <b>any</b> engine. Select a row to read each engine's full response, its citations by source type, tracked competitor presence and the query fan-out behind the answer, all sourced from the same underlying <code>response_facts</code> data used across AIVIS.</div>
+      <div class="dt"><b>What this page shows.</b> Each row on the left is one prompt run. A prompt can be answered by up to three engines in the same run; the green dot shows whether your brand was mentioned by <b>any</b> engine. Select a row to read each engine's full response, its citations by source type, tracked competitor presence and the query fan-out behind the answer, all sourced from the same underlying <code>response data</code> data used across AIVIS.</div>
     </div>
 
     <div class="info-bar">
@@ -1097,7 +1097,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
       <div class="mtbl-head">
         <div>
           <div class="t">Master response data</div>
-          <div class="m">One row per captured response (prompt &times; capture date &times; engine), every field sourced from the same response_facts data driving this page. Respects the filters above; click a column heading to sort.</div>
+          <div class="m">One row per captured response (prompt &times; capture date &times; engine), every field sourced from the same response data driving this page. Respects the filters above; click a column heading to sort.</div>
         </div>
         <span class="mtbl-count"><b id="mtblCount">0</b> responses</span>
       </div>
@@ -1122,7 +1122,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
       </div>
     </div>
 
-    <div class="foot-note">Data through response_facts, latest capture run. Fan-out queries are logged per response only (query text and type); there is no per-fan-out-query citation record, so citation accuracy is always shown at response level. Answer text, citations and competitor positions are illustrative demo data. AU English. Clarendon Homes workspace.</div>
+    <div class="foot-note">Data through response data, latest capture run. Fan-out queries are logged per response only (query text and type); there is no per-fan-out-query citation record, so citation accuracy is always shown at response level. Answer text, citations and competitor positions are illustrative demo data. AU English. Clarendon Homes workspace.</div>
   </main>
 </div>
 
@@ -2841,13 +2841,13 @@ function buildMetrics(p, e){
   var sentiVal = e.sentiment.charAt(0).toUpperCase()+e.sentiment.slice(1);
   return [
     {label:'Visibility', value:visVal, available:true, tone: e.mentioned ? 'good' : 'muted',
-      note:'Real for this response, from response_facts (mentioned + position). The portfolio Visibility score aggregates mentions and position across every unbranded prompt in the period and is not shown here.'},
+      note:'Real for this response, from response data (mentioned + position). The portfolio Visibility score aggregates mentions and position across every unbranded prompt in the period and is not shown here.'},
     {label:'Avg. position', value:posHeadline, available:true, tone: e.mentioned ? 'good' : 'muted', sub:posSub,
       note:'Computed only from the captured runs of this prompt and this engine on this page. The portfolio Average position metric spans every unbranded prompt in the period, not just this one.'},
     {label:'Share of voice', value:'Not available', available:false, tone:'muted',
       note:'Share of Voice is a portfolio-level metric computed across every unbranded prompt in the period. It cannot be honestly derived from a single response, so no number is shown here. See the competitor view below for what is real about this response.'},
     {label:'Sentiment', value:sentiVal, available:true, tone:e.sentiment,
-      note:'The sentiment classification for this specific response, from response_facts.'}
+      note:'The sentiment classification for this specific response, from response data.'}
   ];
 }
 
@@ -2914,7 +2914,7 @@ function competitorSectionHtml(mode, e, period){
         + '</div>';
     }).join('');
     return head + '<div class="comp-tbl">'+rows+'</div>'
-      + '<div class="ac-comp-all-note">Raw mention rate and average position across '+stats.totalResponses+' captured engine responses in '+periodLabelText(period)+' (every prompt, every engine), not filtered to the current list filters. This is not the governed portfolio Share of Voice metric, which weights by prompt pool and period per ANALYSIS_SPEC.md; it is shown as a transparent, non-fabricated cross-check only.</div>';
+      + '<div class="ac-comp-all-note">Raw mention rate and average position across '+stats.totalResponses+' captured engine responses in '+periodLabelText(period)+' (every prompt, every engine), not filtered to the current list filters. This is not the governed portfolio Share of Voice metric, which weights by prompt pool and period; it is shown as a transparent, non-fabricated cross-check only.</div>';
   }
   return head + compsHtml(e);
 }

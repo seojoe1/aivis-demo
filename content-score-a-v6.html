@@ -761,7 +761,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
 
     <div class="info-bar amber-warn" id="scoringLogicBanner" role="note">
       <svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.29 3.86l-8.18 14.18A1.5 1.5 0 003.5 20.5h17a1.5 1.5 0 001.39-2.46L13.71 3.86a1.5 1.5 0 00-2.42 0z"/></svg>
-      <span><b>Scoring logic pending verification.</b> This scorer is deterministic and heuristic (query alignment, chunkability, authority signals, entity clarity -- weighted 30/30/25/15). It has not yet been peer-reviewed or published in docs/ANALYSIS_SPEC.md. Scores may change as the methodology is validated. Checks tagged <b>Proposed</b> below come from AIVIS's "AI Search Writing Guide" (May 2026) and the live Page Audit; they are diagnostic only and not yet implemented in the live content scorer.</span>
+      <span><b>Beta scoring model.</b> Scores are heuristic, based on query alignment, chunkability, authority signals and entity clarity (weighted 30/30/25/15). The methodology is still being validated, so scores may shift between versions. Checks tagged <b>Proposed</b> below come from AIVIS's "AI Search Writing Guide" (May 2026) and the live Page Audit; they are diagnostic only and not yet implemented in the live content scorer.</span>
     </div>
 
     <!-- ============ 1. AI INSIGHTS ============ -->
@@ -836,7 +836,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
         </div>
         <div class="info-bar foot">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-          <span>Scoring runs entirely on the draft's text. <b>PromptWatch has no comparable pre-publish content check</b>, so this guides the draft before it ever ships.</span>
+          <span>Scoring runs entirely on the draft's text. <b>This is a pre-publish check, so it guides the draft before it ever ships.</span>
         </div>
       </div>
     </div>
@@ -2377,13 +2377,13 @@ function buildMetrics(p, e){
   var sentiVal = e.sentiment.charAt(0).toUpperCase()+e.sentiment.slice(1);
   return [
     {label:'Visibility', value:visVal, available:true, tone: e.mentioned ? 'good' : 'muted',
-      note:'Real for this response, from response_facts (mentioned + position). The portfolio Visibility score aggregates mentions and position across every unbranded prompt in the period and is not shown here.'},
+      note:'Real for this response, from the captured response (mentioned + position). The portfolio Visibility score aggregates mentions and position across every unbranded prompt in the period and is not shown here.'},
     {label:'Avg. position', value:posHeadline, available:true, tone: e.mentioned ? 'good' : 'muted', sub:posSub,
       note:'Computed only from the captured runs of this prompt and this engine. The portfolio Average position metric spans every unbranded prompt in the period, not just this one.'},
     {label:'Share of voice', value:'Not available at response level', available:false, tone:'muted',
       note:'Share of Voice is a portfolio-level metric computed across every unbranded prompt in the period. It cannot be honestly derived from a single response, so no number is shown here. See the competitor view below for what is real about this response.'},
     {label:'Sentiment', value:sentiVal, available:true, tone:e.sentiment,
-      note:'The sentiment classification for this specific response, from response_facts.'}
+      note:'The sentiment classification for this specific response, from the captured response.'}
   ];
 }
 
@@ -2431,7 +2431,7 @@ function competitorAllHtml(rangeDays){
   }).join('');
   return '<div class="ac-sec-lbl-row"><div class="ac-sec-lbl">Competitor view <span class="ac-sec-n mono">'+(TRACKED.length+1)+' brands</span></div>'+compToggleHtml('all')+'</div>'
     + '<div class="comp-tbl">'+rows+'</div>'
-    + '<div class="ac-comp-all-note">Raw mention rate and average position across '+stats.totalResponses+' captured engine responses in '+rangeLbl+' (every corpus-matched prompt, every engine, every captured date in range), not filtered to this one response. This is not the governed portfolio Share of Voice metric, which weights by prompt pool and period per ANALYSIS_SPEC.md; it is shown as a transparent, non-fabricated cross-check only.</div>';
+    + '<div class="ac-comp-all-note">Raw mention rate and average position across '+stats.totalResponses+' captured engine responses in '+rangeLbl+' (every corpus-matched prompt, every engine, every captured date in range), not filtered to this one response. This is not the governed portfolio Share of Voice metric, which weights by prompt pool and period; it is shown as a transparent, non-fabricated cross-check only.</div>';
 }
 function competitorThisHtml(e){
   return '<div class="ac-sec-lbl-row"><div class="ac-sec-lbl">Competitor view <span class="ac-sec-n mono">'+(TRACKED.length+1)+' brands</span></div>'+compToggleHtml('this')+'</div>'

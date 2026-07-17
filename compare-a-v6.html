@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>AIVIS - Compare (V6 Final) - Clarendon Homes</title>
+<title>AIVIS - Compare - Clarendon Homes</title>
 <!--
   FAUX-BOLD FALLBACK METHOD: real Geist Medium (500) and SemiBold (600) woff2
   files could not be located in the repo within the time-boxed search
@@ -918,7 +918,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
               <button class="cmp-yarrow" type="button" data-cyr="1" aria-label="Next year"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
             </div>
             <div class="cmp-months" id="cmpMonths"></div>
-            <div class="cmp-cal-note">Pick a single prior month to compare the current period against. This selector is not wired to a live comparison in this mockup; use the Period over period mode below for a functioning brand-over-time comparison.</div>
+            <div class="cmp-cal-note">Pick a single prior month to compare the current period against. This selector is not wired to a live comparison in this demo; use the Period over period mode below for a functioning brand-over-time comparison.</div>
           </div>
         </div>
       </div>
@@ -953,7 +953,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
 
     <div class="demo-strip">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-      <span><b>Illustrative demo data.</b> Clarendon Homes headline figures (Visibility 29.8%, Share of Voice 16.6%, Position 1.3, Net Sentiment 33.7) are real tracked values, consistent with the Competitors page. Competitor figures, per-engine splits, response-level detail and period history are illustrative fixtures for this mockup.</span>
+      <span><b>Illustrative demo data.</b> Clarendon Homes headline figures (Visibility 29.8%, Share of Voice 16.6%, Position 1.2, Net Sentiment 51) are real tracked values, consistent with the Competitors page. Competitor figures, per-engine splits, response-level detail and period history are illustrative fixtures for this demo.</span>
     </div>
 
     <!-- SECTION 1: AI INSIGHTS -->
@@ -1227,7 +1227,7 @@ h1.title{font-size:23px;font-weight:600;letter-spacing:-0.02em;}
       <div class="chart-axis-note" id="respEmpty" style="display:none">No response-level rows match the current filters.</div>
     </div>
 
-    <div class="foot-note">AIVIS demo &middot; Compare (brand-level) &middot; Clarendon Homes headline figures (Visibility 29.8%, Share of Voice 16.6%, Position 1.3, Net Sentiment 33.7) are real; competitor figures, per-engine splits, response-level detail and period history are illustrative fixtures.</div>
+    <div class="foot-note">AIVIS demo &middot; Compare (brand-level) &middot; Clarendon Homes headline figures (Visibility 29.8%, Share of Voice 16.6%, Position 1.2, Net Sentiment 51) are real; competitor figures, per-engine splits, response-level detail and period history are illustrative fixtures.</div>
   </main>
 </div>
 
@@ -1552,9 +1552,9 @@ window.AnswersCard = (function(){
   var LATEST = "Jun 2026";
 
   // headline metrics for the latest period (Jun 2026). Clarendon's own figures are real
-  // (vis 29.8, sov 16.6, pos 1.3, nsi 33.7); competitor figures are illustrative fixtures.
+  // (vis 29.8, sov 16.6, pos 1.3, nsi 51); competitor figures are illustrative fixtures.
   var HEADLINE = {
-    clarendon: {vis:29.8, sov:16.6, pos:1.3, nsi:33.7, cite:41},
+    clarendon: {vis:29.8, sov:16.6, pos:1.2, nsi:51, cite:41},
     plant:     {vis:24.1, sov:14.3, pos:1.8, nsi:41.2, cite:33},
     metri:     {vis:22.3, sov:13.2, pos:2.1, nsi:38.0, cite:29},
     brigh:     {vis:19.4, sov:9.6,  pos:2.4, nsi:36.5, cite:24}
@@ -1562,11 +1562,11 @@ window.AnswersCard = (function(){
 
   // Clarendon's own period history (illustrative trend into the real Jun 2026 headline).
   var HISTORY = {
-    "Feb 2026": {vis:26.8, sov:14.1, pos:1.9, nsi:31.2, cite:34},
-    "Mar 2026": {vis:27.6, sov:14.9, pos:1.7, nsi:31.9, cite:36},
-    "Apr 2026": {vis:28.4, sov:15.6, pos:1.5, nsi:32.6, cite:38},
-    "May 2026": {vis:29.1, sov:16.1, pos:1.4, nsi:33.1, cite:40},
-    "Jun 2026": {vis:29.8, sov:16.6, pos:1.3, nsi:33.7, cite:41}
+    "Feb 2026": {vis:30.2, sov:24.1, pos:1.6, nsi:48.5, cite:34},
+    "Mar 2026": {vis:31.5, sov:25.0, pos:1.5, nsi:55.0, cite:36},
+    "Apr 2026": {vis:32.8, sov:25.8, pos:1.4, nsi:62.0, cite:38},
+    "May 2026": {vis:33.6, sov:26.6, pos:1.3, nsi:72.5, cite:40},
+    "Jun 2026": {vis:29.8, sov:16.6, pos:1.2, nsi:51, cite:41}
   };
 
   var METRICS = [
@@ -1585,7 +1585,7 @@ window.AnswersCard = (function(){
     {key:"nsi",  name:"Net Sentiment",   pool:"both",      color:"var(--violet)", suffix:"",  higherBetter:true,
       def:"Sentiment index (0 to 100, 50 = neutral), scored across both prompt pools combined.",
       formula:"50 + (positive - negative) mentions scaled, both pools",
-      example:"Clarendon Homes at 33.7 sits below the neutral 50 mark, so framing skews slightly negative across both pools this period."},
+      example:"Clarendon Homes at 51 sits just above the neutral 50 mark, so framing is finely balanced across both pools this period."},
     {key:"cite", name:"Citations",       pool:"unbranded", color:"var(--steel)",  suffix:"",  higherBetter:true,
       def:"Count of distinct web domains that AI cited when mentioning this brand this period, from the unbranded pool.",
       formula:"count of distinct citing domains, unbranded pool",
@@ -1892,7 +1892,7 @@ window.AnswersCard = (function(){
     renderRespTbl();
   }
 
-  /* ---- Compare to (visual-only in this mockup; Period over period mode below is the functioning equivalent) ---- */
+  /* ---- Compare to (visual-only in this demo; Period over period mode below is the functioning equivalent) ---- */
   function selectCanonCompare(val){
     document.querySelectorAll("#compareDrop .fopt.radio").forEach(function(o){
       var on=o.getAttribute("data-cmp")===val;
@@ -1948,7 +1948,7 @@ window.AnswersCard = (function(){
   function toggleCanonEngine(key){ canonEngine[key]=!canonEngine[key]; renderCanonEngineMenu(); renderRespTbl(); }
 
   /* ---- Topics (searchable multi-select; Compare's response rows carry no topic dimension, so this is
-     a fully interactive, honestly display-only filter in this mockup - it does not narrow any table) ---- */
+     a fully interactive, honestly display-only filter in this demo - it does not narrow any table) ---- */
   function renderCanonTopicSelectAll(){
     var onCount=CANON_TOPICS.filter(function(t){return canonTopic[t];}).length;
     $("canonTopicSelectAll").innerHTML='<div class="fopt selectall'+(onCount===CANON_TOPICS.length?" on":"")+'" data-role="all" tabindex="0" role="option"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-11"/></svg></span>Select all</div>';
@@ -2014,7 +2014,7 @@ window.AnswersCard = (function(){
       {
         dir: deltaDir(metricOf("vis"), visD),
         delta: fmtDelta(Math.round(visD*10)/10)+"pp",
-        html: "<b>Visibility climbed to "+fmt(HEADLINE.clarendon.vis,"%")+"</b> in Jun 2026, up from "+fmt(HISTORY["Feb 2026"].vis,"%")+" in Feb, the fourth straight month of gains across the unbranded pool.",
+        html: "<b>Visibility eased to "+fmt(HEADLINE.clarendon.vis,"%")+"</b> in Jun 2026, down from "+fmt(HISTORY["May 2026"].vis,"%")+" in May after three straight months of gains across the unbranded pool.",
         go: "kpiSec", goLabel: "View snapshot"
       },
       {
@@ -2026,7 +2026,7 @@ window.AnswersCard = (function(){
       {
         dir: deltaDir(metricOf("nsi"), nsiD),
         delta: fmtDelta(Math.round(nsiD*10)/10),
-        html: "<b>Net Sentiment sits at "+fmt(HEADLINE.clarendon.nsi,"")+"</b>, up "+fmt(Math.round(nsiD*10)/10,"")+" points since Feb, but still below the neutral midpoint of 50, the only headline metric not yet in positive territory.",
+        html: "<b>Net Sentiment sits at "+fmt(HEADLINE.clarendon.nsi,"")+"</b>, up "+fmt(Math.round(nsiD*10)/10,"")+" points since Feb, though the drop from May's 72.5 peak makes it the headline metric to watch this period.",
         go: "firewallSec", goLabel: "Why pools differ"
       }
     ];

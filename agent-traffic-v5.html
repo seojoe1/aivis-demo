@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Agent Traffic</title>
+<title>AIVIS - Agent Traffic - Clarendon Homes</title>
 </head>
 <body>
 <style>
@@ -380,7 +380,7 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
       <div class="lbl">Data</div>
       <a class="nav-item"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Prompts</a>
       <a class="nav-item"><svg viewBox="0 0 24 24"><path d="M12 3l8 4-8 4-8-4 8-4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg>Citations</a>
-      <a class="nav-item" href="agent-status.html"><svg viewBox="0 0 24 24"><path d="M4 4h16v6H4zM4 14h10v6H4z"/><circle cx="17" cy="17" r="3"/></svg>Agent Status</a>
+      <a class="nav-item" href="agent-status-v5.html"><svg viewBox="0 0 24 24"><path d="M4 4h16v6H4zM4 14h10v6H4z"/><circle cx="17" cy="17" r="3"/></svg>Agent Status</a>
       <a class="nav-item active" href="agent-traffic.html"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>Agent Traffic</a>
     </div>
     <div class="side-foot">
@@ -398,11 +398,11 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
   <div class="crumb"><span>Clarendon Homes</span><span class="sep">/</span><b>Agent Traffic</b></div>
   <div class="head-row">
     <div>
-      <h1 class="title">Agent traffic</h1>
-      <div class="head-sub">Visits from AI search: humans landing on clarendon.com.au from AI engine referrers, read from GA4. Crawler activity (bots reading your site) lives in <a href="agent-status.html">Agent Status</a>.</div>
+      <h1 class="title">Agent Traffic</h1>
+      <div class="head-sub">Visits from AI search: humans landing on clarendon.com.au from AI engine referrers, read from GA4. Crawler activity (bots reading your site) lives in <a href="agent-status-v5.html">Agent Status</a>.</div>
     </div>
     <div class="toggles-col">
-      <div class="mock-seg" title="Mockup-state switch for design review only, not a product control">
+      <div class="mock-seg" title="Demo-state switch: preview both connection states">
         <span class="mock-seg-lbl"><span class="nt">DEMO</span>GA4 state</span>
         <div class="seg-toggle" id="stateSeg">
           <button class="on" data-state="connected">Connected (illustrative)</button>
@@ -414,7 +414,7 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
 
   <div class="view-toggle-bar">
     <span class="vtb-lbl">Preview state</span>
-    <span>Showing illustrative GA4 referral data so the design can be reviewed. The six referrer domains are the real attribution set; every visit count is simulated. Real values come from the GA4 Data API once a brand connects. The DEMO switch (top right) previews the honest not-connected state.</span>
+    <span>Showing illustrative GA4 referral data. The six referrer domains are the real attribution set; every visit count is simulated. Real values come from the GA4 Data API once a brand connects. The DEMO switch (top right) previews the honest not-connected state.</span>
   </div>
 
   <div class="nc-card" id="ncCard">
@@ -426,7 +426,7 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
       <span class="nc-dom">gemini.google.com</span><span class="nc-dom">copilot.microsoft.com</span><span class="nc-dom">grok.com</span>
     </div>
     <button class="nc-cta" id="ncCta">Connect GA4</button>
-    <div class="nc-alt">The connection is stored per brand in <span class="mono">integration_connections</span>. Crawler activity does not need GA4: see <a href="agent-status.html">Agent Status</a>.</div>
+    <div class="nc-alt">The connection is stored per brand in <span class="mono">integration_connections</span>. Crawler activity does not need GA4: see <a href="agent-status-v5.html">Agent Status</a>.</div>
   </div>
 
   <div class="populated-view" id="populatedView">
@@ -559,7 +559,7 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
 
     <div class="xpage">
       <svg viewBox="0 0 24 24"><path d="M4 4h16v6H4zM4 14h10v6H4z"/><circle cx="17" cy="17" r="3"/></svg>
-      <span>This page is humans arriving from AI engines. Crawler activity, which AI bots read which pages, lives in <a href="agent-status.html">Agent Status</a>.</span>
+      <span>This page is humans arriving from AI engines. Crawler activity, which AI bots read which pages, lives in <a href="agent-status-v5.html">Agent Status</a>.</span>
     </div>
 
     <div class="sec-eyebrow">AI Referral Visit Log
@@ -1223,7 +1223,7 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
   $$('.subtab').forEach(function(t){t.addEventListener('click',function(){gotoTab(t.getAttribute('data-tab'));});});
   $$('.view-all').forEach(function(b){b.addEventListener('click',function(){gotoTab(b.getAttribute('data-goto'));});});
 
-  /* connected / not-connected mockup state */
+  /* connected / not-connected demo state */
   $$('#stateSeg button').forEach(function(b){
     b.addEventListener('click',function(){
       $$('#stateSeg button').forEach(function(x){x.classList.remove('on');});
@@ -1234,7 +1234,7 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
     });
   });
   $('#ncCta').addEventListener('click',function(){
-    alert('In the product this starts the GA4 OAuth connect flow and stores the connection in integration_connections. Mockup only.');
+    alert('In the product this starts the GA4 OAuth connect flow and stores the connection in integration_connections. Demo only.');
   });
 
   /* sticky bar shadow when pinned */
@@ -1245,7 +1245,7 @@ th.sort-on .avl-sortbtn{color:var(--teal);}
 
   /* ============ info popovers on derived metrics ============ */
   var POP={
-    aivisit:{t:'AI referral visit',def:'A human session whose referrer is one of the six tracked AI engine domains. Counted from GA4, not from crawler logs.',flabel:'Attribution set',formula:'sessionSource IN (chatgpt.com, claude.ai, perplexity.ai, gemini.google.com, copilot.microsoft.com, grok.com)',note:'Read via the GA4 Data API once a brand connects GA4. Illustrative demo data in this mockup.'},
+    aivisit:{t:'AI referral visit',def:'A human session whose referrer is one of the six tracked AI engine domains. Counted from GA4, not from crawler logs.',flabel:'Attribution set',formula:'sessionSource IN (chatgpt.com, claude.ai, perplexity.ai, gemini.google.com, copilot.microsoft.com, grok.com)',note:'Read via the GA4 Data API once a brand connects GA4. Illustrative demo data in this demo.'},
     delta:{t:'Trend delta',def:'Change versus the immediately preceding window of the same length (7, 30 or 90 days).',flabel:'Formula',formula:'delta = (current_period_visits - prior_period_visits) / prior_period_visits',note:'Shown as n/a when the prior window has zero visits for that engine.'},
     share:{t:'Share of AI visits',def:'This row’s visits as a share of all AI referral visits in the current filtered view.',flabel:'Formula',formula:'share = row_visits / total_filtered_visits',note:'Shares in one table always sum to 100% (subject to 0.1pp rounding) because every row comes from the same filtered log.'},
     visitors:{t:'Visitors vs visits',def:'Visitors counts distinct users; visits counts sessions. One visitor can make several visits, so visitors is always less than or equal to visits.',flabel:'GA4 fields',formula:'visitors = totalUsers, visits = sessions',note:'Only the visits column reconciles to the page total. Visitor counts are deduplicated per row and cannot be summed across rows.'},
