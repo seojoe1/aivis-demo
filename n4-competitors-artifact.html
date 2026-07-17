@@ -1301,7 +1301,7 @@ span.elogo.letter{display:inline-flex;align-items:center;justify-content:center;
       <div class="h2h2-grid" id="h2hGrid"></div>
       <div class="info-bar foot">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-        <span>Sentiment and the recommend-rate are scored over both prompt pools; SoV, visibility and citations over unbranded prompts only. <b>vs field average</b> recomputes every rival figure as the mean of all tracked competitors. Contributing-factor notes and competitor figures are illustrative for this demo; Clarendon's own SoV 16.6%, Visibility 29.8% and Net Sentiment 33.7 are real.</span>
+        <span>Sentiment and the recommend-rate are scored over both prompt pools; SoV, visibility and citations over unbranded prompts only. <b>vs field average</b> recomputes every rival figure as the mean of all tracked competitors. Contributing-factor notes and competitor figures are illustrative for this demo; Clarendon's own SoV 16.6%, Visibility 29.8% and Net Sentiment 51 are real.</span>
       </div>
     </div>
 
@@ -1557,11 +1557,11 @@ span.elogo.letter{display:inline-flex;align-items:center;justify-content:center;
       <div class="cm-empty" id="cmEmpty">No rows match your search and filters.</div>
       <div class="info-bar foot">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-        <span>Rows are <b>topic by brand</b>, not per prompt: this page does not store the individual AI responses, so per-prompt and per-engine rows are not available here. Rank, leader and gap are derived from the per-topic share-of-voice values and reconcile with the category gap track above. Clarendon's blended headline values (SoV 16.6%, Visibility 29.8%, Net Sentiment 33.7) are real.</span>
+        <span>Rows are <b>topic by brand</b>, not per prompt: this page does not store the individual AI responses, so per-prompt and per-engine rows are not available here. Rank, leader and gap are derived from the per-topic share-of-voice values and reconcile with the category gap track above. Clarendon's blended headline values (SoV 16.6%, Visibility 29.8%, Net Sentiment 51) are real.</span>
       </div>
     </div>
 
-    <div class="foot-note">AIVIS demo &middot; Clarendon Homes &middot; Suggested rows, per-topic splits, head-to-head factor notes and the duplicate/denylist examples are illustrative and clearly labelled &middot; tracked headline values (SoV 16.6%, Visibility 29.8%, Net Sentiment 33.7) are real</div>
+    <div class="foot-note">AIVIS demo &middot; Clarendon Homes &middot; Suggested rows, per-topic splits, head-to-head factor notes and the duplicate/denylist examples are illustrative and clearly labelled &middot; tracked headline values (SoV 16.6%, Visibility 29.8%, Net Sentiment 51) are real</div>
   </main>
 </div>
 
@@ -1880,7 +1880,7 @@ window.FAV = {
     var drop=document.getElementById('h2hDrop'), grid=document.getElementById('h2hGrid');
     var modeSeg=document.getElementById('h2hMode'), tally=document.getElementById('h2hTally');
     if(!drop||!grid) return;
-    var YOU={sov:16.6,vis:29.8,sent:33.7,cite:41,cov:62,rec:58};
+    var YOU={sov:16.6,vis:29.8,sent:51,cite:41,cov:62,rec:58};
     var COMP={
       plant:{name:'Plantation Homes',fav:window.FAV.plant,sov:14.3,vis:24.1,sent:41.2,cite:33,cov:55,rec:47},
       metri:{name:'Metricon',fav:window.FAV.metri,sov:13.2,vis:22.3,sent:38.0,cite:29,cov:51,rec:44},
@@ -2016,10 +2016,10 @@ window.FAV = {
     nsi:{
       t:'Net Sentiment',
       def:'Net Sentiment measures how favourably the AI describes a brand, on a 0-to-100 scale where 50 is neutral. It is scored across both branded and unbranded prompts.',
-      example:'For example, if Clarendon is mentioned in <b>300</b> responses and negative-or-mixed descriptions outnumber positive ones (say 70 positive against 168 negative or mixed), NSI = 50 + 50 x (70 - 168) / 300 = <b>33.7</b>, below the neutral 50 line.',
+      example:'For example, if Clarendon is mentioned in <b>300</b> responses and negative-or-mixed descriptions outnumber positive ones (say 106 positive against 100 negative or mixed out of 300 scored), NSI = 50 + 50 x (106 - 100) / 300 = <b>51</b>, just above the neutral 50 line.',
       flabel:'Formula',
       formula:'NSI = 50 + 50 * (positive_count - (negative_count + mixed_weight * mixed_count)) / mentioned_count',
-      note:'mentioned_count = responses where the brand was mentioned (all labels except Not mentioned); mixed_weight defaults to 1.0. Competitor sentiment figures on this page are illustrative; Clarendon\'s 33.7 is real.'
+      note:'mentioned_count = responses where the brand was mentioned (all labels except Not mentioned); mixed_weight defaults to 1.0. Competitor sentiment figures on this page are illustrative; Clarendon\'s 51 is real.'
     },
     cm:{
       t:'Competitive movement',

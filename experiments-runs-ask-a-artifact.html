@@ -1117,7 +1117,7 @@ button,input,textarea,select{font-family:inherit;}
                   <div>Clarendon Homes' branded visibility sits at 41.8% for June 2026, up from 39.4% in May. Over the last quarter the trend has been gently positive, with the strongest gains in Google AI Overviews and the softest in Copilot.</div>
                   <ul>
                     <li>Overall visibility: 41.8% (+2.4pp vs May)</li>
-                    <li>Share of voice rank: #2 of 13 tracked brands</li>
+                    <li>Share of voice rank: #1 of 138 discovered brands</li>
                     <li>Strongest engine: Google AI Overviews</li>
                   </ul>
                   <a class="source-chip" href="javascript:void(0)" data-chip-topic="Visibility trend"><svg viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-9 9M5 5h6M5 5v14h14v-6"/></svg>View Visibility trend</a>
@@ -1315,7 +1315,7 @@ var starterAnswers = {
   "How is my visibility trending?": {
     intent:'Visibility',
     text:"Clarendon Homes' branded visibility sits at 41.8% for June 2026, up from 39.4% in May. Over the last quarter the trend has been gently positive, with the strongest gains in Google AI Overviews and the softest in Copilot.",
-    list:['Overall visibility: 41.8% (+2.4pp vs May)','Share of voice rank: #2 of 13 tracked brands','Strongest engine: Google AI Overviews'],
+    list:['Overall visibility: 41.8% (+2.4pp vs May)','Share of voice rank: #1 of 138 discovered brands','Strongest engine: Google AI Overviews'],
     sourceChip:'Visibility trend'
   },
   "Who is my biggest AI competitor?": {
@@ -1380,7 +1380,7 @@ function appendAssistantMessage(payload){
   var caveatHtml = payload.caveat ? '<div class="grounding-caveat">' + payload.caveat + '</div>' : '';
   var chipHtml = payload.sourceChip ? '<a class="source-chip" href="javascript:void(0)" data-chip-topic="' + payload.sourceChip + '"><svg viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-9 9M5 5h6M5 5v14h14v-6"/></svg>View ' + payload.sourceChip + '</a>' : '';
   var provenanceHtml = payload.isMockupNotice
-    ? '<div class="provenance">Mockup only &middot; no live data connected.</div>'
+    ? '<div class="provenance">Demo only &middot; no live data connected.</div>'
     : '<div class="provenance">Based on data generated 8 Jul 2026.</div>';
   row.innerHTML = '<div class="msg-avatar bot-av"><svg viewBox="0 0 24 24"><path d="M12 3l1.6 4.9L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.1L12 3z"/></svg></div>' +
     '<div class="msg-bubble">' + badgeHtml + '<div>' + payload.text + '</div>' + listHtml + caveatHtml + chipHtml + provenanceHtml + '</div>';
