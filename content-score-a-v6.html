@@ -1613,7 +1613,8 @@ function runMethodChecks(raw, query, p){
 
 /* ---- tier classification (REAL thresholds) ---- */
 function classifyTier(overall){
-  if(overall>=80) return {key:'exc', label:'Excellent'};
+  if(overall>
+<link rel="stylesheet" href="assets/aivis-fonts.css">=80) return {key:'exc', label:'Excellent'};
   if(overall>=60) return {key:'good', label:'Good'};
   if(overall>=40) return {key:'fair', label:'Fair'};
   return {key:'poor', label:'Poor'};

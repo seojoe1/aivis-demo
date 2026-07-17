@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <title>AIVIS - Brand Overview - Clarendon Homes</title>
+<link rel="stylesheet" href="assets/aivis-fonts.css">
 <style>
 @font-face {
   font-family: 'Geist';
@@ -98,7 +99,7 @@ b,strong{font-weight:600;}
 .wordmark .name b{font-weight:600;color:var(--teal);}
 .nav-group{margin-top:12px;}
 .nav-group .lbl{
-  font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+  font-size:12px;font-weight:600;text-transform:none;
   color:var(--grey-2);padding:4px 8px;
 }
 .nav-item{
@@ -110,7 +111,7 @@ b,strong{font-weight:600;}
 .nav-item:hover{background:var(--chip);}
 .nav-item.active{background:rgba(17,167,180,0.10);color:var(--ink);font-weight:500;}
 .nav-item.active svg{stroke:var(--teal);}
-.nav-item.active{box-shadow:inset 2px 0 0 var(--teal);}
+.nav-item.active{background:var(--teal-tint);font-weight:600;}
 
 .side-foot{margin-top:auto;padding-top:14px;}
 
@@ -160,7 +161,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .fopt.radio.on .box{background:#fff;border-color:var(--teal);}
 .fopt.radio.on .box::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal);}
 .fmenu .divide{height:1px;background:var(--line-2);margin:5px 4px;}
-.fmenu .mhead{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);padding:6px 9px 4px;}
+.fmenu .mhead{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);padding:6px 9px 4px;}
 
 /* ---- rich two-pane period picker (fix 5) ---- */
 .fmenu.period-menu{min-width:auto;padding:0;overflow:hidden;}
@@ -241,7 +242,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .card-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;}
 .card-h .t{font-size:14px;font-weight:600;letter-spacing:-0.01em;}
 .card-h .m{font-size:12px;color:var(--grey-2);}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--grey-2);}
+.eyebrow{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);}
 
 .grid{display:grid;gap:16px;}
 
@@ -277,7 +278,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .insight-narr .em{font-weight:600;}
 .insight-narr .v-dn{color:var(--red);font-weight:500;}
 .insight-narr .v-up{color:var(--green);font-weight:500;}
-.insight-meta{font-size:12px;color:var(--grey);margin-top:12px;}
+.insight-meta{font-size:12px;color:var(--grey);margin-top:12px;font-family:'Geist',system-ui,sans-serif;}
 .chip-stack{display:flex;flex-direction:column;gap:9px;border-left:1px solid var(--line-2);padding-left:18px;}
 @media(max-width:760px){.chip-stack{border-left:none;padding-left:0;border-top:1px solid var(--line-2);padding-top:14px;}}
 .stat-chip{display:flex;align-items:center;gap:9px;}
@@ -287,8 +288,8 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .stat-chip .sc-d{font-size:11px;}
 .risk-pill{
   display:inline-flex;align-items:center;gap:7px;margin-top:4px;
-  background:rgba(244,183,64,0.13);color:#8a6410;border:1px solid rgba(244,183,64,0.4);
-  border-radius:999px;padding:6px 11px;font-size:12px;font-weight:500;
+  color:#8a6410;
+  font-size:12px;font-weight:500;
 }
 .risk-pill svg{width:14px;height:14px;stroke:#b8860b;stroke-width:1.8;fill:none}
 
@@ -373,8 +374,8 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .bar-name{font-size:13px;color:var(--ink-2);display:flex;align-items:center;gap:6px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .bar-name .you{font-size:10px;font-weight:600;color:var(--teal);background:rgba(17,167,180,0.1);padding:1px 6px;border-radius:10px;}
 .disc-tag{font-size:10px;color:var(--grey-2);background:var(--chip);padding:1px 6px;border-radius:10px;}
-.bar-track{display:block;width:100%;height:8px;background:var(--line-2);border-radius:6px;overflow:hidden;}
-.bar-fill{display:block;height:8px;border-radius:6px;transition:width .35s ease;}
+.bar-track{display:block;width:100%;height:12px;background:var(--line-2);border-radius:6px;overflow:hidden;}
+.bar-fill{display:block;height:12px;border-radius:6px;transition:width .35s ease;}
 .bar-val{font-size:13px;text-align:right;}
 .disc-row{display:none;}
 .showall .disc-row{display:grid;}
@@ -396,7 +397,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 /* ---------- TOPIC COVERAGE (rich, expandable) ---------- */
 .topic-tbl{width:100%;border-collapse:collapse;}
 .topic-tbl th{
-  font-size:11px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--grey-2);
+  font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);
   text-align:left;padding:0 10px 10px;
 }
 .topic-tbl th.c{text-align:center;}
@@ -440,7 +441,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .pmeta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
   padding-top:9px;border-top:1px solid var(--line-2);}
 .pm-stat{display:inline-flex;align-items:baseline;gap:5px;font-size:12px;color:var(--grey);white-space:nowrap;}
-.pm-k{font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--grey-2);}
+.pm-k{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);}
 .pm-v{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-2);}
 .pm-u{font-size:11px;color:var(--grey);}
 .pm-sep{color:var(--line);font-size:11px;}
@@ -453,15 +454,15 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .pm-bar{display:flex;align-items:flex-end;padding-left:9px;margin-left:2px;border-left:1px solid var(--line-2);}
 .pmini-bars{display:flex;gap:3px;align-items:flex-end;height:16px;}
 .pmini-seg{width:8px;border-radius:4px;background:var(--e-chatgpt);align-self:flex-end;}
-.pmini-seg.off{background:var(--line-2);height:3px!important;}
+.pmini-seg.off{background:var(--line-2);height:12px!important;}
 @media(max-width:720px){.pm-dots{margin-left:0;}}
 
 /* sentiment */
 .nsi-hero{display:flex;align-items:baseline;gap:12px;margin-bottom:4px;}
 .nsi-val{font-size:38px;font-weight:600;letter-spacing:-0.03em;line-height:1;}
 .nsi-max{font-size:16px;color:var(--grey-2);}
-.nsi-tag{font-size:12px;color:var(--green);font-weight:500;background:rgba(46,158,91,0.1);padding:3px 9px;border-radius:999px;}
-.score-band{position:relative;display:flex;height:8px;border-radius:6px;margin:16px 0 6px;overflow:hidden;}
+.nsi-tag{font-size:12px;color:var(--green);font-weight:500;}
+.score-band{position:relative;display:flex;height:12px;border-radius:6px;margin:16px 0 6px;overflow:hidden;}
 .score-band i{display:block;height:100%;}
 .score-band::after{content:"";position:absolute;top:-3px;height:14px;width:3px;border-radius:4px;background:var(--ink);left:51%;z-index:2;}
 .band-legend{display:flex;justify-content:space-between;font-size:11px;color:var(--grey-2);}
@@ -472,7 +473,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .dist-legend .sw{width:9px;height:9px;border-radius:4px;}
 .drivers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);}
 @media(max-width:600px){.drivers{grid-template-columns:1fr;}}
-.driver-h{font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:9px;display:flex;align-items:center;gap:6px;}
+.driver-h{font-size:12px;font-weight:600;text-transform:none;margin-bottom:9px;display:flex;align-items:center;gap:6px;}
 .driver-h.pos{color:var(--green);}
 .driver-h.neg{color:var(--red);}
 .driver-chips{display:flex;flex-wrap:wrap;gap:7px;}
@@ -483,9 +484,9 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 /* plan widget */
 .plan-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;}
 .plan-name{font-size:16px;font-weight:600;}
-.plan-badge{font-size:11px;font-weight:500;color:var(--teal);background:rgba(17,167,180,0.1);padding:3px 9px;border-radius:999px;}
+.plan-badge{font-size:11px;font-weight:500;color:var(--teal);}
 .plan-meta{font-size:12px;color:var(--grey);}
-.prog-track{height:8px;background:var(--line-2);border-radius:6px;overflow:hidden;margin:8px 0 6px;}
+.prog-track{height:12px;background:var(--line-2);border-radius:6px;overflow:hidden;margin:8px 0 6px;}
 .prog-fill{height:100%;background:var(--teal);border-radius:6px;}
 .prog-lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--grey);}
 
@@ -521,7 +522,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .popover.flip-left::before{left:16px;transform:rotate(45deg);}
 .pop-t{font-size:12px;font-weight:600;color:var(--ink);letter-spacing:-0.005em;margin-bottom:5px;}
 .pop-def{font-size:12px;color:var(--ink-2);line-height:1.5;margin-bottom:9px;}
-.pop-flabel{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);margin-bottom:4px;}
+.pop-flabel{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);margin-bottom:4px;}
 .pop-formula{
   font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);line-height:1.5;
   background:var(--chip);border:1px solid var(--line-2);border-radius:10px;padding:8px 10px;word-break:break-word;
@@ -533,14 +534,14 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
   border-radius:10px;padding:8px 10px;margin-bottom:9px;
 }
 .pop-example .pex-lbl{
-  display:block;font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
+  display:block;font-size:12px;font-weight:600;text-transform:none;
   color:var(--teal);margin-bottom:3px;
 }
 .pop-example b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;}
 
 /* ---- 1. AI Insights redesign ---- */
 .insight-card{position:relative;overflow:hidden;}
-.insight-edge{position:absolute;left:0;top:0;bottom:0;width:4px;display:flex;flex-direction:column;}
+.insight-edge{display:none;}
 .insight-edge i{flex:1;display:block;}
 .ai-badge{
   width:30px;height:30px;border-radius:10px;background:rgba(17,167,180,0.12);
@@ -701,7 +702,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 }
 .prow.pop-open .pbreak{max-height:260px;opacity:1;}
 .pbreak-inner{border-top:1px solid var(--line-2);padding-top:11px;}
-.pbreak-h{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);margin-bottom:9px;}
+.pbreak-h{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);margin-bottom:9px;}
 .pbrow{display:grid;grid-template-columns:20px 1fr auto auto;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--line-2);}
 .pbrow:last-child{border-bottom:none;}
 .pbrow .pb-name{font-size:13px;color:var(--ink-2);font-weight:500;}
@@ -745,7 +746,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .ins-hmetric::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--hm);}
 .ins-hm-top{display:flex;align-items:center;gap:6px;margin-bottom:7px;}
 .ins-hm-dot{width:8px;height:8px;border-radius:50%;background:var(--hm);flex:0 0 auto;}
-.ins-hm-lbl{font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--grey-2);}
+.ins-hm-lbl{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);}
 .ins-hm-mid{display:flex;align-items:baseline;gap:7px;}
 .ins-hm-val{font-size:22px;font-weight:600;letter-spacing:-0.02em;line-height:1;font-family:'IBM Plex Mono',monospace;}
 .ins-hm-d{font-size:12px;font-weight:500;display:inline-flex;align-items:center;gap:3px;}
@@ -834,7 +835,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 }
 .pbrow .pb-metrics{display:flex;align-items:center;gap:14px;}
 .pbrow .pb-mstat{display:inline-flex;align-items:baseline;gap:5px;}
-.pbrow .pb-mk{font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--grey-2);}
+.pbrow .pb-mk{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);}
 .pbrow .pb-mv{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-2);}
 .pbrow .pb-mv.na{color:var(--grey-2);}
 .pbrow .pb-comps{display:flex;align-items:center;gap:5px;justify-content:flex-end;flex-wrap:wrap;}
@@ -916,7 +917,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
   color:var(--ink-2);
   background:#eef0f2;
   border:1px solid #d9dce0;
-  border-left:3px solid var(--grey);
+  
   padding:10px 12px;
 }
 .info-bar svg{stroke:var(--ink-2);opacity:.85;}
@@ -944,11 +945,11 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .ins-focus-h .iff-ic{width:22px;height:22px;border-radius:6px;background:rgba(244,183,64,0.18);
   display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
 .ins-focus-h .iff-ic svg{width:13px;height:13px;stroke:#b8860b;stroke-width:2;fill:none;}
-.ins-focus-h .iff-t{font-size:11px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:var(--grey);}
+.ins-focus-h .iff-t{font-size:12px;font-weight:600;text-transform:none;color:var(--grey);}
 .ins-focus-rows{display:flex;flex-direction:column;gap:9px;}
 .iff-row{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:11px;}
 .iff-lbl{font-size:12px;color:var(--ink-2);}
-.iff-track{height:7px;border-radius:6px;background:var(--line-2);overflow:hidden;position:relative;}
+.iff-track{height:12px;border-radius:6px;background:var(--line-2);overflow:hidden;position:relative;}
 /* two stacked fills: your share (teal) then the ground competitors took (grey) */
 .iff-track .iff-you{position:absolute;left:0;top:0;bottom:0;background:var(--teal);border-radius:6px;}
 .iff-track .iff-comp{position:absolute;top:0;bottom:0;background:#c4423a;border-radius:6px;opacity:.85;}
@@ -986,7 +987,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
    count per engine). Extends the existing .pbrow drawer with a competitor
    sub-table. ---- */
 .pb-comp-tbl{margin-top:11px;border-top:1px dashed var(--line);padding-top:10px;}
-.pb-comp-h{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);margin-bottom:8px;
+.pb-comp-h{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);margin-bottom:8px;
   display:flex;align-items:center;gap:6px;}
 .pb-comp-h svg{width:12px;height:12px;stroke:var(--grey-2);stroke-width:1.7;fill:none;flex:0 0 auto;}
 .pbc-row{display:grid;grid-template-columns:20px 1fr auto;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--line-2);}
@@ -1020,7 +1021,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .pb-resp-meta{display:flex;align-items:center;gap:8px;margin-bottom:9px;flex-wrap:wrap;}
 .pb-resp-meta .prm-eng{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);font-weight:500;}
 .pb-resp-meta .prm-eng img{width:16px;height:16px;border-radius:4px;background:#fff;border:1px solid var(--line-2);object-fit:contain;}
-.pb-resp-meta .prm-tag{font-size:10px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;
+.pb-resp-meta .prm-tag{font-size:12px;font-weight:600;text-transform:none;
   color:var(--grey-2);background:var(--chip);border:1px solid var(--line-2);border-radius:999px;padding:2px 8px;}
 .pb-resp-meta .prm-run{font-size:11px;color:var(--grey-2);font-family:'IBM Plex Mono',monospace;margin-left:auto;}
 .pb-resp-body{font-size:13px;line-height:1.6;color:var(--ink-2);white-space:normal;}
@@ -1071,15 +1072,15 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 @keyframes insDrift{from{transform:translateX(-6px)}to{transform:translateX(6px)}}
 @media(prefers-reduced-motion:reduce){.ins-wave{animation:none;}}
 .ins-art-cap{
-  position:absolute;left:13px;bottom:10px;font-size:11px;color:var(--grey-2);
-  letter-spacing:0.04em;text-transform:uppercase;font-weight:600;
+  position:absolute;left:13px;bottom:10px;font-size:12px;color:var(--grey-2);
+  text-transform:none;font-weight:600;
   display:flex;align-items:center;gap:6px;z-index:2;
 }
 .ins-art-cap .iac-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex:0 0 auto;}
 .ins-art-tag{
   position:absolute;right:13px;top:11px;z-index:2;font-size:11px;font-weight:600;
-  color:var(--red);background:rgba(217,83,79,0.09);border:1px solid rgba(217,83,79,0.22);
-  border-radius:999px;padding:3px 9px;display:inline-flex;align-items:center;gap:5px;
+  color:var(--red);
+  display:inline-flex;align-items:center;gap:5px;
 }
 .ins-art-tag .iat-ar{display:inline-block;width:0;height:0;
   border-left:3px solid transparent;border-right:3px solid transparent;border-top:5px solid var(--red);}
@@ -1099,13 +1100,13 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
    can be compared on one common frame at a glance. The raw delta stays; the rail
    is context, not a replacement. ---- */
 .tile-scale{margin-top:11px;padding-top:11px;border-top:1px solid var(--line-2);}
-.tile-scale-track{position:relative;height:6px;border-radius:6px;background:var(--line-2);overflow:visible;}
+.tile-scale-track{position:relative;height:12px;border-radius:6px;background:var(--line-2);overflow:visible;}
 .tile-scale-fill{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--tsc,var(--teal));opacity:.9;}
 /* prior-period ghost marker: a thin neutral tick showing where the index sat last period */
 .tile-scale-prev{position:absolute;top:-2px;height:10px;width:2px;border-radius:4px;background:var(--grey-2);z-index:2;}
 .tile-scale-now{position:absolute;top:-3px;height:12px;width:3px;border-radius:4px;background:var(--tsc,var(--teal));z-index:3;}
 .tile-scale-lbl{display:flex;align-items:center;justify-content:space-between;margin-top:7px;font-size:10px;color:var(--grey-2);}
-.tile-scale-lbl .tsl-k{letter-spacing:0.04em;text-transform:uppercase;font-weight:600;}
+.tile-scale-lbl .tsl-k{text-transform:none;font-weight:600;}
 .tile-scale-lbl .tsl-v{font-family:'IBM Plex Mono',monospace;color:var(--ink-2);}
 .tile-scale-lbl .tsl-v .tsl-prev{color:var(--grey-2);}
 
@@ -1127,7 +1128,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .pbpane{display:none;}
 .pbpane.on{display:block;}
 /* citation rows: favicon + domain + brief label + a small "cited x times" chip */
-.cite-h{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);
+.cite-h{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);
   margin-bottom:9px;display:flex;align-items:center;gap:6px;}
 .cite-h svg{width:12px;height:12px;stroke:var(--grey-2);stroke-width:1.7;fill:none;flex:0 0 auto;}
 .cite-row{display:grid;grid-template-columns:20px 24px 1fr auto;align-items:center;gap:11px;
@@ -1144,7 +1145,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .cite-lbl .cite-comp{color:#a23127;font-weight:500;}
 .cite-count{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--grey-2);
   font-family:'IBM Plex Mono',monospace;white-space:nowrap;}
-.cite-count .cc-bar{display:inline-block;height:6px;border-radius:4px;background:var(--indigo);opacity:.8;}
+.cite-count .cc-bar{display:inline-block;height:12px;border-radius:4px;background:var(--indigo);opacity:.8;}
 .cite-foot{font-size:11px;color:var(--grey-2);margin-top:11px;display:flex;align-items:center;gap:6px;line-height:1.4;}
 .cite-foot svg{width:12px;height:12px;stroke:var(--grey-2);stroke-width:1.7;fill:none;flex:0 0 auto;}
 /* the open drawer needs more room now that it can hold a citations pane */
@@ -1154,7 +1155,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 </style>
 <style>
 /* ============ AIVIS premium grammar (Phase 3 pilot) ============ */
-.insight-edge{display:none!important}
+.insight-edge{display:none;}
 .info-bar{background:transparent!important;border:none!important;padding:12px 2px 0!important;color:var(--grey)!important;font-size:12px!important}
 .info-bar svg{display:none!important}
 .info-bar .mono{font-family:inherit!important}
@@ -1166,7 +1167,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .card-h{margin-bottom:18px!important}
 .driver-h,.eyebrow,.fmenu .mhead,.ins-art-cap,.ins-hm-lbl,.nav-group .lbl,.pm-k,.tile-scale-lbl .tsl-k,.topic-tbl th{text-transform:none!important;letter-spacing:0!important;font-size:12px!important}
 .bar-fill,.bar-track{height:14px!important;border-radius:7px!important}
-.tile-scale-track{height:10px!important;border-radius:5px!important}
+.tile-scale-track{height:12px!important;border-radius:5px!important}
 .pb-resp-meta .prm-run{font-family:'Geist',system-ui,sans-serif!important}
 
 .gstat{min-height:82px!important;padding:14px!important;justify-content:flex-start!important;gap:0!important}
@@ -1375,11 +1376,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
       </div>
 
       <div class="card insight-card">
-        <div class="insight-edge">
-          <i style="background:var(--teal)"></i>
-          <i style="background:var(--indigo)"></i>
-          <i style="background:var(--green)"></i>
-        </div>
+        
         <div class="card-h">
           <div class="insight-head">
             <span class="ai-badge">
@@ -1430,7 +1427,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
               <span class="ins-art-cap"><span class="iac-dot"></span>This period vs last</span>
               <span class="ins-art-tag"><span class="iat-ar"></span>Easing</span>
             </div>
-            <div class="insight-meta mono">Summary generated from this period, compared against May 2026</div>
+            <div class="insight-meta">Summary generated from this period, compared against May 2026</div>
           </div>
           <div class="chip-stack">
             <div class="stat-chip"><span class="dot" style="background:var(--amber)"></span><span class="sc-lbl">Avg position</span><span class="sc-val mono">1.2</span></div>
@@ -3261,4 +3258,12 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 })();
 </script>
 
-<style>.side{display:none!important}.shell{grid-template-columns:minmax(0,1fr)!important}</style>
+<style>.side{display:none!important}.shell{grid-template-columns:minmax(0,1fr)!important}
+/* structure: KPI baseline + focus + rhythm (handoff 9.2) */
+.gstat{min-height:96px}
+.gstat .gs-lbl{min-height:32px;display:flex;align-items:flex-start}
+.gstat .gs-val{margin-top:auto}
+.seg-toggle button:hover:not(.on){background:var(--chip)}
+.mchip:hover{background:var(--chip)}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,[role=button]:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:8px}
+</style>

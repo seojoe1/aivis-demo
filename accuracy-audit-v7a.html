@@ -16,6 +16,7 @@
   IBM Plex Mono is unaffected (its three weights are correct and distinct) and
   is copied verbatim below.
 -->
+<link rel="stylesheet" href="assets/aivis-fonts.css">
 <style>
 @font-face {
   font-family: 'Geist';
@@ -101,18 +102,18 @@ button{font-family:inherit;}
 .wordmark .name{font-weight:600;font-size:16px;letter-spacing:-0.01em;color:var(--ink);}
 .wordmark .name b{font-weight:600;color:var(--teal);}
 .nav-group{margin-top:12px;}
-.nav-group .lbl{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--grey-2);padding:4px 8px;}
+.nav-group .lbl{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);padding:4px 8px;}
 .nav-item{display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:10px;color:var(--ink-2);font-size:14px;cursor:pointer;text-decoration:none;}
 .nav-item svg{width:16px;height:16px;flex:0 0 auto;stroke:var(--grey);stroke-width:1.7;fill:none}
 .nav-item:hover{background:var(--chip);}
-.nav-item.active{background:rgba(17,167,180,0.10);color:var(--ink);font-weight:500;box-shadow:inset 2px 0 0 var(--teal);}
+.nav-item.active{background:rgba(17,167,180,0.10);color:var(--ink);font-weight:500;}
 .nav-item.active svg{stroke:var(--teal);}
 .side-foot{margin-top:auto;padding-top:14px;}
 .plan-row{display:flex;align-items:center;justify-content:space-between;}
 .plan-name{font-size:13px;font-weight:600;}
 .plan-badge{font-size:11px;font-weight:600;color:#1f7a44;background:rgba(46,158,91,0.11);padding:2px 8px;border-radius:999px;}
 .plan-meta{font-size:12px;color:var(--grey);margin-top:4px;}
-.prog-track{height:5px;border-radius:4px;background:var(--chip);margin-top:9px;overflow:hidden;}
+.prog-track{height:12px;border-radius:4px;background:var(--chip);margin-top:9px;overflow:hidden;}
 .prog-fill{height:100%;background:var(--teal);border-radius:4px;}
 .prog-lbl{display:flex;justify-content:space-between;font-size:11px;color:var(--grey);margin-top:6px;}
 
@@ -160,7 +161,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .fopt.radio.on .box{background:#fff;border-color:var(--teal);}
 .fopt.radio.on .box::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal);}
 .fmenu .divide{height:1px;background:var(--line-2);margin:5px 4px;}
-.fmenu .mhead{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);padding:6px 9px 4px;}
+.fmenu .mhead{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);padding:6px 9px 4px;}
 
 /* ---- rich two-pane period picker ---- */
 .fmenu.period-menu{min-width:auto;padding:0;overflow:hidden;}
@@ -230,7 +231,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .card-h{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
 .t{font-size:14px;font-weight:600;letter-spacing:-0.01em;}
 .m{font-size:12px;color:var(--grey-2);}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--grey-2);}
+.eyebrow{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);}
 .sec{position:relative;margin-top:28px;}
 .sec:first-of-type{margin-top:8px;}
 .sec-title{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
@@ -262,13 +263,13 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .popover.flip-left::before{left:16px;transform:rotate(45deg);}
 .pop-t{font-size:12px;font-weight:600;color:var(--ink);letter-spacing:-0.005em;margin-bottom:5px;}
 .pop-def{font-size:12px;color:var(--ink-2);line-height:1.5;margin-bottom:9px;}
-.pop-flabel{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);margin-bottom:4px;}
+.pop-flabel{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);margin-bottom:4px;}
 .pop-formula{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-2);line-height:1.5;background:var(--chip);border:1px solid var(--line-2);border-radius:10px;padding:8px 10px;word-break:break-word;}
 .pop-note{font-size:11px;color:var(--grey);line-height:1.45;margin-top:9px;}
 
 /* ---------- AI Insights (byte-identical pattern to citations-rebuild-v5) ---------- */
 .insight-card{position:relative;overflow:hidden;padding-top:16px;}
-.insight-edge{position:absolute;left:0;top:0;bottom:0;width:4px;display:flex;flex-direction:column;}
+.insight-edge{display:none;}
 .insight-edge i{flex:1;display:block;}
 .ai-badge{width:30px;height:30px;border-radius:10px;background:rgba(17,167,180,0.12);display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
 .ai-badge svg{width:17px;height:17px;stroke:var(--teal);stroke-width:1.9;fill:none;}
@@ -284,7 +285,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .insight-meta{font-size:12px;color:var(--grey);margin-top:14px;padding-top:12px;border-top:1px solid var(--line-2);}
 
 /* ---------- deltas (house .rdelta + .rar, replaces old .delta triangle-glyph mess) ---------- */
-.rdelta{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap;}
+.rdelta{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;white-space:nowrap;}
 .rdelta.dn{color:var(--red);background:rgba(217,83,79,0.09);}
 .rdelta.up{color:var(--green);background:rgba(46,158,91,0.10);}
 .rdelta.flat{color:var(--grey);background:var(--chip);}
@@ -372,7 +373,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .taxo-row{display:grid;grid-template-columns:190px 1fr 30px;align-items:center;gap:10px;}
 .taxo-row.taxo-new .taxo-lbl{color:var(--ink);font-weight:600;}
 .taxo-lbl{font-size:13px;color:var(--ink-2);display:flex;align-items:center;gap:6px;}
-.taxo-new-tag{font-size:10px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#8a6410;background:rgba(244,183,64,0.18);border-radius:6px;padding:1px 5px;}
+.taxo-new-tag{font-size:12px;font-weight:700;text-transform:none;color:#8a6410;background:rgba(244,183,64,0.18);border-radius:6px;padding:1px 5px;}
 .taxo-track{height:16px;border-radius:4px;background:var(--chip);overflow:hidden;}
 .taxo-fill{height:100%;border-radius:4px;background:var(--e-aio);}
 .taxo-fill.tf-amber{background:var(--amber);}
@@ -380,7 +381,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 
 /* ---------- confidence bands ---------- */
 .conf-meter{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--ink-2);white-space:nowrap;}
-.conf-meter-track{width:34px;height:4px;border-radius:4px;background:var(--chip);overflow:hidden;display:inline-block;vertical-align:middle;}
+.conf-meter-track{width:34px;height:12px;border-radius:4px;background:var(--chip);overflow:hidden;display:inline-block;vertical-align:middle;}
 .conf-meter-fill{height:100%;background:var(--teal);display:block;}
 .conf-band{font-family:'Geist',sans-serif;font-weight:500;font-size:11px;color:var(--grey);}
 .conf-meter.band-low .conf-meter-fill{background:var(--amber);}
@@ -392,7 +393,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .conflict-src{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;padding:8px 10px;border-radius:10px;background:var(--chip);color:var(--ink-2);}
 .conflict-src + .conflict-src{margin-top:6px;}
 .conflict-src b{font-weight:600;color:var(--ink);}
-.conflict-vs{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);text-align:center;margin:6px 0;}
+.conflict-vs{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);text-align:center;margin:6px 0;}
 .conflict-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px;padding-top:10px;border-top:1px solid var(--line-2);}
 .conflict-count{font-size:12px;color:var(--grey);}
 .conflict-action{font-size:12px;color:var(--e-aio);font-weight:500;}
@@ -407,7 +408,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .clear-filters:hover{text-decoration:underline;}
 
 .dt{width:100%;border-collapse:collapse;}
-.dt th{font-size:11px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--grey-2);text-align:left;padding:0 12px 10px;}
+.dt th{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);text-align:left;padding:0 12px 10px;}
 .dt th.r{text-align:right;}
 .dt tbody tr{transition:background .12s;cursor:pointer;}
 .dt tbody tr:hover{background:#fafbfc;}
@@ -429,7 +430,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .row-act-btn.flag-btn[aria-pressed="true"]{background:rgba(244,183,64,0.16);color:#8a6410;border-color:rgba(244,183,64,0.45);}
 .row-act-btn.flag-btn[aria-pressed="true"] svg path{fill:currentColor;}
 .claim-row.claim-flagged{background:rgba(244,183,64,0.05);}
-.flag-badge{display:inline-flex;align-items:center;gap:4px;height:19px;border-radius:6px;background:rgba(244,183,64,0.16);color:#8a6410;padding:0 7px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;white-space:nowrap;}
+.flag-badge{display:inline-flex;align-items:center;gap:4px;height:19px;border-radius:6px;background:rgba(244,183,64,0.16);color:#8a6410;padding:0 7px;font-size:12px;font-weight:700;text-transform:none;white-space:nowrap;}
 .flag-badge svg{width:9px;height:9px;stroke:currentColor;stroke-width:2.4;fill:currentColor;}
 .claim-row.dt-removing{opacity:0;transition:opacity .18s ease;}
 .dt th.sortable{cursor:pointer;user-select:none;}
@@ -463,7 +464,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .popout-body{flex:1;overflow-y:auto;padding:18px 22px 30px;}
 .popout-sec{padding-bottom:18px;border-top:1px solid var(--line);padding-top:16px;}
 .popout-sec:first-child{border-top:none;padding-top:0;}
-.popout-sec-lbl{font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--grey-2);margin-bottom:9px;}
+.popout-sec-lbl{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);margin-bottom:9px;}
 
 /* evidence block: sits at the TOP of the body (below the not-understood banner if present) */
 .evi-block{border:1px solid var(--line);border-radius:14px;padding:14px 15px;background:#fbfcfd;}
@@ -479,7 +480,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .nu-banner span{font-size:13px;color:#6b5410;line-height:1.5;}
 
 .po-prompt{border-radius:6px;border:1px solid var(--line);background:var(--chip);padding:11px 12px;font-size:13px;line-height:1.55;color:var(--ink-2);}
-.po-response{border-radius:6px;border:1px solid rgba(21,87,160,0.3);border-left:3px solid var(--e-aio);background:rgba(21,87,160,0.05);padding:12px 13px;font-size:13px;line-height:1.6;color:var(--ink);white-space:pre-wrap;}
+.po-response{border-radius:6px;border:1px solid rgba(21,87,160,0.3);background:rgba(21,87,160,0.05);padding:12px 13px;font-size:13px;line-height:1.6;color:var(--ink);white-space:pre-wrap;}
 .po-response.raw{border-color:var(--line);border-left-color:var(--grey-2);background:var(--chip);color:var(--grey);font-family:'IBM Plex Mono',monospace;font-size:12px;}
 .hl-brand{background:rgba(17,167,180,0.16);color:#0c6b74;font-weight:600;border-radius:4px;padding:0 2px;}
 .hl-comp{background:rgba(138,144,152,0.16);color:var(--ink-2);font-weight:500;border-radius:4px;padding:0 2px;}
@@ -547,7 +548,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .cfp-quote{font-size:13px;line-height:1.55;color:var(--ink-2);}
 .cfp-mark{background:rgba(217,83,79,0.18);color:#8a2e2b;padding:0 3px;border-radius:4px;font-weight:600;}
 .cfp-vs{display:flex;align-items:center;justify-content:center;padding:0 2px;}
-.cfp-vs-chip{width:30px;height:30px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--grey-2);text-transform:uppercase;flex:0 0 auto;}
+.cfp-vs-chip{width:30px;height:30px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--grey-2);text-transform:none;flex:0 0 auto;}
 @media(max-width:760px){.cfp-vs{padding:6px 0;}}
 .cfp-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:13px;padding-top:12px;border-top:1px solid var(--line-2);}
 .cfp-count{font-size:12px;color:var(--grey);}
@@ -577,7 +578,7 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
 .add-claim-btn{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#fff;border:none;border-radius:10px;padding:8px 14px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap;}
 .add-claim-btn:hover{background:#0f96a2;}
 .add-claim-btn svg{width:14px;height:14px;stroke:#fff;stroke-width:2.2;fill:none;}
-.manual-flag{display:inline-flex;align-items:center;height:19px;border-radius:6px;background:rgba(79,91,213,0.12);color:var(--indigo);padding:0 7px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;margin-left:6px;vertical-align:middle;}
+.manual-flag{display:inline-flex;align-items:center;height:19px;border-radius:6px;background:rgba(79,91,213,0.12);color:var(--indigo);padding:0 7px;font-size:12px;font-weight:700;text-transform:none;margin-left:6px;vertical-align:middle;}
 
 /* ---------- brand facts panel (source-of-truth register + coverage check) ---------- */
 .facts-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px;}
@@ -614,7 +615,7 @@ img.elogo{width:14px;height:14px;border-radius:4px;flex:0 0 auto;vertical-align:
 /* ---------- popout: metrics bar for THIS response ---------- */
 .po-metrics{display:flex;flex-wrap:wrap;gap:12px 24px;}
 .po-metric{display:flex;flex-direction:column;gap:3px;min-width:88px;}
-.po-metric-k{font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--grey-2);display:flex;align-items:center;gap:4px;}
+.po-metric-k{font-size:12px;font-weight:600;text-transform:none;color:var(--grey-2);display:flex;align-items:center;gap:4px;}
 .po-metric-v{font-size:13px;font-weight:500;color:var(--ink);}
 .po-metric-v.na{color:var(--grey-2);font-weight:400;font-style:italic;font-size:12px;}
 
@@ -654,7 +655,7 @@ img.elogo{width:14px;height:14px;border-radius:4px;flex:0 0 auto;vertical-align:
 .po-run-row{display:flex;align-items:center;gap:9px;padding:9px 11px;font-size:12px;color:var(--ink-2);}
 .po-run-row+.po-run-row{border-top:1px solid var(--line-2);}
 .po-run-row .elogo{width:14px;height:14px;border-radius:4px;flex:0 0 auto;}
-.po-run-row .curr{margin-left:auto;font-size:10px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:0.04em;}
+.po-run-row .curr{margin-left:auto;font-size:12px;font-weight:600;color:var(--teal);text-transform:none;}
 </style>
 <div class="shell">
   <aside class="side">
@@ -798,7 +799,7 @@ img.elogo{width:14px;height:14px;border-radius:4px;flex:0 0 auto;vertical-align:
     <!-- SECTION 1: AI Insights -->
     <div class="card insight-card sec" id="aiInsights">
       
-      <div class="insight-edge"><i style="background:var(--teal)"></i><i style="background:var(--red)"></i><i style="background:var(--amber)"></i></div>
+      
       <div class="card-h">
         <div class="insight-head">
           <span class="ai-badge"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.4"/></svg></span>
@@ -823,7 +824,7 @@ img.elogo{width:14px;height:14px;border-radius:4px;flex:0 0 auto;vertical-align:
           <button class="ains-go" type="button" data-go="claimsTable">View evidence<svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
         </div>
       </div>
-      <div class="insight-meta mono">Generated from 18 checked claims &middot; June 2026 vs May 2026 &middot; both prompt pools</div>
+      <div class="insight-meta">Generated from 18 checked claims &middot; June 2026 vs May 2026 &middot; both prompt pools</div>
     </div>
 
     <!-- SECTION 2: Accuracy at a glance (Concept 1: rubric-summary-first scorecard) -->
@@ -2497,4 +2498,9 @@ applyClaimFilters();
 renderFactsReview();
 </script>
 
-<style>.side{display:none!important}.shell{grid-template-columns:minmax(0,1fr)!important}</style>
+<style>.side{display:none!important}.shell{grid-template-columns:minmax(0,1fr)!important}
+/* structure (handoff 9.6) */
+.stile-top{min-height:36px;align-items:flex-start}
+.stile:focus-visible,a:focus-visible,button:focus-visible,[role=button]:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:8px}
+.dt tbody tr:hover{background:var(--chip)}
+</style>

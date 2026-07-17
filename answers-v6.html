@@ -662,7 +662,8 @@ h1.title{font-size:22px;font-weight:600;letter-spacing:-0.02em;}
    already declared in :root above (--ink, --ink-2, --grey, --grey-2,
    --line, --line-2, --card, --chip, --teal, --green, --red, --amber,
    --amber-dk, --violet, --indigo) and the Geist / IBM Plex Mono faces
-   loaded in <head>. To reuse on another report: copy this whole CSS block,
+   loaded in <head>
+<link rel="stylesheet" href="assets/aivis-fonts.css">. To reuse on another report: copy this whole CSS block,
    the "ANSWERS CARD COMPONENT JS" <script> block, and the two root HTML
    nodes (#acOverlay, #acDrawer) verbatim, then write a page-specific
    adapter that calls window.AnswersCard.open({...}) - see the section of
